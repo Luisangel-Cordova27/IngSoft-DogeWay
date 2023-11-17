@@ -1,5 +1,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Landing page*/
@@ -57,4 +59,43 @@ body{
 .section-hero{
     display: block;
     width: 100%;
+    background-image: url(img/main-landingmain-background.png);
+    height: 933px;
+    background-size: cover;
+}
+
+.eslogan{
+    width: 434px;
+    margin-left: 60px;
+    padding-top: 126px;
+}
+
+.eslogan h1{
+    color: #0DCEDA;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.eslogan h3{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.button-eslogan{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #0DCEDA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 32px 43px;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.button-eslogan:hover{
+    transform: scale(1.1);
 }
