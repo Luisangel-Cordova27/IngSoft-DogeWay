@@ -4,20 +4,19 @@ body{
 
 /* Landing page*/
 .container-header{
-    position: relative;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container-header h1{
     display: inline;
-    float: left;
 }
 
 .landing-nav{
-   position:absolute;
-   right: 0;
-   top: 33px;
+    display: inline;
 }
 
 .opciones-landing{
@@ -53,4 +52,9 @@ body{
 
 .button-Register:hover{
     transform: scale(1.1);
+}
+
+.section-hero{
+    display: block;
+    width: 100%;
 }
