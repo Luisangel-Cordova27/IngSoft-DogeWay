@@ -107,7 +107,8 @@ body{
 }
 
 .container{
-    padding-top: 151px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     margin: 0 auto;
     display: flex;
     width: 80%;
@@ -115,7 +116,7 @@ body{
 
 .titulo-why{
     width: 34%;
-    margin-right: 10%;
+    margin-right: 15%;
 }
 
 .titulo-why h1{
