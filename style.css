@@ -115,7 +115,7 @@ body{
 
 .titulo-why{
     width: 34%;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 .titulo-why h1{
@@ -136,6 +136,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     width: 65%;
+    gap: 25px;
 }
 
 .caracteristicas-why div{
