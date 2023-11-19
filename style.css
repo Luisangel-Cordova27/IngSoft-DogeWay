@@ -107,19 +107,20 @@ body{
 }
 
 .container{
-    padding-top: 151px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     margin: 0 auto;
     display: flex;
     width: 80%;
 }
 
 .titulo-why{
-    width: 34%;
-    margin-right: 5%;
+    width: 39%;
+    margin-right: 10%;
 }
 
 .titulo-why h1{
-    font-size: 48px;
+    font-size: 45px;
     font-weight: bold;
     color: #2D2F30;
     margin-top: 0;
@@ -129,13 +130,15 @@ body{
     text-align: center;
     color: #8B8C8C;
     line-height: 2em;
-    width: 384px;
+    width: auto;
+    font-size: 20px;
 }
 
 .caracteristicas-why{
     display: flex;
     flex-wrap: wrap;
     width: 65%;
+    gap: 25px;
 }
 
 .caracteristicas-why div{
@@ -161,6 +164,7 @@ body{
 }
 
 
+<<<<<<< HEAD
 .footer_element{
     position: relative;
     min-height: 79vh;
@@ -219,3 +223,182 @@ footer{
      align-items: flex-start;
      float: left;
 }
+=======
+/*registro usuario*/
+.titulo-R h1{
+    color:#363940;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.titulo-R h2{
+    color: #363940;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.cuadro-R{
+    border: 1px solid #C7C8CA;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+
+.cuadro-R h4{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.cuadro-R input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cuadro-R button{
+    width: 100%;
+    padding: 10px 53px;
+    background-color: #0DCEDA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+    
+.cuadro-R button:hover{
+    transform: scale(1.1);
+}
+
+.cuadro-R hr{
+    width: 35%;
+    border: 0.5px solid #8B8C8C;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+}
+
+.cuadro-R .lineas-y-o {
+    display: flex;
+    align-items: center; 
+  }
+
+.cuadro-R .button-Google{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #FFFFFF;
+    color: hsl(200, 3%, 18%);
+    border: 1px solid #2D2F30;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    background-image: url(img/google.png);
+    background-size: 20px;
+    background-position: 95px center;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 15px;
+}
+
+.cuadro-R .button-Google:hover{
+    transform: scale(1.1);
+}
+.titulo{
+    display: flex;
+    padding-top: 87px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.titulo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.section-adopcion p{
+    text-align: center;
+    color: #8B8C8C;
+    line-height: 2em;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.container-collage{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 42px;
+    padding-bottom: 91px;
+}
+
+footer{
+    margin-top: 157px;
+    margin-bottom: -30px;
+}
+
+.info-footer{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.datos-footer ul{
+    list-style: none;
+}
+
+.datos-footer ul li{
+    margin-top: 32px;
+}
+
+.datos-titulo{
+    color: #0A939B;
+}
+
+.datos-texto{
+    color: #292E3D;
+    margin-left: 13px;
+}
+
+.iconos-footer ul{
+    display: flex;
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.iconos-footer li{
+    margin-right: 19px;
+}
+
+.footer_element{
+    background-color: #249ca4;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-top: 10px;
+    align-items: center;
+    font-size: small;
+}
+>>>>>>> 4a984da7d2e9d0d641ade7c79ba390c150a4589c
