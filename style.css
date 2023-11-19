@@ -160,3 +160,101 @@ body{
     color: #363940;
     margin: 0;
 }
+
+/*registro usuario*/
+.titulo-R h1{
+    color:#363940;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.titulo-R h2{
+    color: #363940;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.cuadro-R{
+    border: 1px solid #C7C8CA;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+
+.cuadro-R h4{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.cuadro-R input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cuadro-R button{
+    width: 100%;
+    padding: 10px 53px;
+    background-color: #0DCEDA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+    
+.cuadro-R button:hover{
+    transform: scale(1.1);
+}
+
+.cuadro-R hr{
+    width: 35%;
+    border: 0.5px solid #8B8C8C;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+}
+
+.cuadro-R .lineas-y-o {
+    display: flex;
+    align-items: center; 
+  }
+
+.cuadro-R .button-Google{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #FFFFFF;
+    color: hsl(200, 3%, 18%);
+    border: 1px solid #2D2F30;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    background-image: url(img/google.png);
+    background-size: 20px;
+    background-position: 95px center;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 15px;
+}
+
+.cuadro-R .button-Google:hover{
+    transform: scale(1.1);
+}
