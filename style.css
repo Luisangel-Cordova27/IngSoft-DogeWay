@@ -107,19 +107,20 @@ body{
 }
 
 .container{
-    padding-top: 151px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     margin: 0 auto;
     display: flex;
     width: 80%;
 }
 
 .titulo-why{
-    width: 34%;
+    width: 39%;
     margin-right: 10%;
 }
 
 .titulo-why h1{
-    font-size: 48px;
+    font-size: 45px;
     font-weight: bold;
     color: #2D2F30;
     margin-top: 0;
@@ -129,7 +130,8 @@ body{
     text-align: center;
     color: #8B8C8C;
     line-height: 2em;
-    width: 384px;
+    width: auto;
+    font-size: 20px;
 }
 
 .caracteristicas-why{
@@ -160,6 +162,7 @@ body{
     color: #363940;
     margin: 0;
 }
+
 
 /*registro usuario*/
 .titulo-R h1{
@@ -257,4 +260,84 @@ body{
 
 .cuadro-R .button-Google:hover{
     transform: scale(1.1);
+}
+.titulo{
+    display: flex;
+    padding-top: 87px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.titulo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.section-adopcion p{
+    text-align: center;
+    color: #8B8C8C;
+    line-height: 2em;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.container-collage{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 42px;
+    padding-bottom: 91px;
+}
+
+footer{
+    margin-top: 157px;
+    margin-bottom: -30px;
+}
+
+.info-footer{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.datos-footer ul{
+    list-style: none;
+}
+
+.datos-footer ul li{
+    margin-top: 32px;
+}
+
+.datos-titulo{
+    color: #0A939B;
+}
+
+.datos-texto{
+    color: #292E3D;
+    margin-left: 13px;
+}
+
+.iconos-footer ul{
+    display: flex;
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.iconos-footer li{
+    margin-right: 19px;
+}
+
+.footer_element{
+    background-color: #249ca4;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-top: 10px;
+    align-items: center;
+    font-size: small;
 }
