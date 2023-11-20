@@ -289,8 +289,10 @@ footer{
     border: 1px solid #858585;
     margin: 20px;
     padding: 110px;
+    /*
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    */
     box-shadow: 10px 10px lightblue;
 
 }
@@ -302,7 +304,7 @@ footer{
      align-items: flex-start;
      float: left;
 }
-=======
+
 /*registro usuario*/
 .titulo-R h1{
     color:#363940;
@@ -480,4 +482,4 @@ footer{
     align-items: center;
     font-size: small;
 }
->>>>>>> 4a984da7d2e9d0d641ade7c79ba390c150a4589c
+
