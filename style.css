@@ -196,6 +196,24 @@ body{
     padding-bottom: 91px;
 }
 
+#collage-1{
+    width: 60%;
+    height: 60%;
+}
+
+#collage-2{
+    width: 35%;
+}
+
+#collage-3{
+    width: 60%;
+    height: 35%;
+}
+
+#collage-4{
+    width: 35%;
+}
+
 footer{
     margin-top: 157px;
     margin-bottom: -30px;
