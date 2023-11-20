@@ -196,24 +196,6 @@ body{
     padding-bottom: 91px;
 }
 
-#collage-1{
-    width: 60%;
-    height: 60%;
-}
-
-#collage-2{
-    width: 35%;
-}
-
-#collage-3{
-    width: 60%;
-    height: 35%;
-}
-
-#collage-4{
-    width: 35%;
-}
-
 footer{
     margin-top: 157px;
     margin-bottom: -30px;
@@ -278,32 +260,17 @@ footer{
     padding-left: 50px;
 }
 
-.row{
-    margin: auto;
-    padding-left: 100px;
-    padding-top: 50px;
-}
-
 .element{
     display: inline-block;
     border: 1px solid #858585;
-    margin: 20px;
-    padding: 110px;
-    /*
+    width: 20%;
+    margin: 10px;
+    padding: 20px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
-    */
     box-shadow: 10px 10px lightblue;
-
-}
-.contentbox{
-    display: flex;
 }
 
-.box_user{
-     align-items: flex-start;
-     float: left;
-}
 
 /*registro usuario*/
 .titulo-R h1{
@@ -375,33 +342,6 @@ footer{
     
 }
 
-.cuadro-R .lineas-y-o {
-    display: flex;
-    align-items: center; 
-  }
-
-.cuadro-R .button-Google{
-    width: 100%;
-    padding: 10px 0px;
-    background-color: #FFFFFF;
-    color: hsl(200, 3%, 18%);
-    border: 1px solid #2D2F30;
-    border-radius: 10px;
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    background-image: url(img/google.png);
-    background-size: 20px;
-    background-position: 95px center;
-    background-repeat: no-repeat;
-    text-align: center;
-    line-height: 15px;
-}
-
-.cuadro-R .button-Google:hover{
-    transform: scale(1.1);
-}
 .titulo{
     display: flex;
     padding-top: 87px;
@@ -427,7 +367,7 @@ footer{
 
 .container-collage{
     display: flex;
-    width: 80%;
+    width: 90%;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;
@@ -483,3 +423,19 @@ footer{
     font-size: small;
 }
 
+section.catalogo{
+    padding-left: 20px;
+}
+
+section.titulocatalogo{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.titulocatalogo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
