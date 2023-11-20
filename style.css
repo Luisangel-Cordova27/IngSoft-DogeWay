@@ -163,25 +163,86 @@ body{
     margin: 0;
 }
 
+.titulo{
+    display: flex;
+    padding-top: 87px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
 
-<<<<<<< HEAD
-.footer_element{
-    position: relative;
-    min-height: 79vh;
+.titulo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.section-adopcion p{
+    text-align: center;
+    color: #8B8C8C;
+    line-height: 2em;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.container-collage{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 42px;
+    padding-bottom: 91px;
 }
 
 footer{
-    background-color: #249ca4;
-    color: rgb(255, 255, 255);
-    font-size: small;
-    font: 'Open Sans', sans-serif;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-left: 75px;
-    padding-top: 25px;
+    margin-top: 157px;
+    margin-bottom: -30px;
 }
 
+.info-footer{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.datos-footer ul{
+    list-style: none;
+}
+
+.datos-footer ul li{
+    margin-top: 32px;
+}
+
+.datos-titulo{
+    color: #0A939B;
+}
+
+.datos-texto{
+    color: #292E3D;
+    margin-left: 13px;
+}
+
+.iconos-footer ul{
+    display: flex;
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.iconos-footer li{
+    margin-right: 19px;
+}
+
+.footer_element{
+    background-color: #249ca4;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-top: 10px;
+    align-items: center;
+    font-size: small;
+}
 
 
 .headliner{
