@@ -266,8 +266,10 @@ footer{
     width: 20%;
     margin: 10px;
     padding: 20px;
+    /*
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    */
     box-shadow: 10px 10px lightblue;
 }
 
@@ -279,10 +281,11 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 0;
+    font-size: 40px;
 }
 
 .titulo-R h2{
-    color: #363940;
+    color: #667085;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -341,6 +344,53 @@ footer{
     margin-bottom: 5px;
     
 }
+
+/*Registro usuario 2 */
+.form-completaInfo{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #E2E4E5;
+    border-radius: 8px;
+}
+
+.contenedor-input{
+    display: flex;
+    gap: 9%;
+    margin-top: 78px;
+}
+
+.contenedor-input div{
+    display: block;
+    width: 27%;
+}
+
+.contenedor-input div label{
+    display: block;
+}
+
+.contenedor-input div .input-registro{
+    display: block;
+    width: 100%;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #667085;
+}
+
+.input-file{
+    display: block;
+    width: 100%;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #667085;
+}
+
+/*Fin de registro usuario 2 */
 
 .titulo{
     display: flex;
