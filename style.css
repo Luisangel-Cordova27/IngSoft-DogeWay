@@ -32,6 +32,7 @@ body{
 .landing-nav a{
     font-size: 16px;
     text-decoration: none;
+    color: black;
 }
 
 .landing-nav a:visited{
