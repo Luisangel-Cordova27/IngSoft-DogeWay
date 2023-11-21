@@ -196,24 +196,6 @@ body{
     padding-bottom: 91px;
 }
 
-#collage-1{
-    width: 60%;
-    height: 60%;
-}
-
-#collage-2{
-    width: 35%;
-}
-
-#collage-3{
-    width: 60%;
-    height: 35%;
-}
-
-#collage-4{
-    width: 35%;
-}
-
 footer{
     margin-top: 157px;
     margin-bottom: -30px;
@@ -278,33 +260,18 @@ footer{
     padding-left: 50px;
 }
 
-.row{
-    margin: auto;
-    padding-left: 100px;
-    padding-top: 50px;
-}
-
 .element{
     display: inline-block;
     border: 1px solid #858585;
-    margin: 20px;
-    padding: 110px;
-    /*
+    width: 20%;
+    margin: 10px;
+    padding: 20px;
     -moz-border-radius: 7px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
-    */
     box-shadow: 10px 10px lightblue;
-
-}
-.contentbox{
-    display: flex;
 }
 
-.box_user{
-     align-items: flex-start;
-     float: left;
-}
 
 /*registro usuario*/
 .titulo-R h1{
@@ -375,6 +342,7 @@ footer{
     margin-bottom: 5px;
     
 }
+
 
 .cuadro-R .lineas-y-o {
     display: flex;
@@ -547,6 +515,7 @@ footer{
     height: auto;
 }
 
+
 .titulo{
     display: flex;
     padding-top: 87px;
@@ -572,7 +541,7 @@ footer{
 
 .container-collage{
     display: flex;
-    width: 80%;
+    width: 90%;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;
@@ -628,3 +597,19 @@ footer{
     font-size: small;
 }
 
+section.catalogo{
+    padding-left: 20px;
+}
+
+section.titulocatalogo{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.titulocatalogo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
