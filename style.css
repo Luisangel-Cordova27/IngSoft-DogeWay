@@ -191,9 +191,25 @@ body{
     width: 80%;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: 20px;
+    gap: 5%;
     padding-top: 42px;
     padding-bottom: 91px;
+}
+
+#collage-1{
+    width: 60%;
+}
+
+#collage-2{
+    width: 35%;
+}
+
+#collage-3{
+    width: 60%;
+}
+
+#collage-4{
+    width: 35%;
 }
 
 footer{
