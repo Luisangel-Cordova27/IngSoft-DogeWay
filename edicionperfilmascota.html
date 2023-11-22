@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-  <title>Registro de Mascotas</title>
+  <title>Edicion de perfil de Mascota</title>
 </head>
 <body>
     <header >
@@ -28,16 +28,15 @@
         </div>
     </header>
     <div class="titulo-RM">
-        <h1><span style="color: #0DCEDA;">Agrega&nbsp;</span>Mascota</h1>
-        <h2>Por favor completa la información de tu mascota</h2>
+        <h1><span style="color: #0DCEDA;">Editar&nbsp;</span>Mascota</h1>
     </div>
     <div class="cuadro-RM">
         <div class="columna">
-            <div class="cuadro-foto">
-                    <img src="img/icono_regis_masco.png" alt="Subir foto">
-                    <div class="formatos-aceptados">Formatos aceptados: JPEG, PNG</div>
-                    <input type="file" id="imagen" name="imagen" accept="image/*">
-                <button class="boton-subir" onclick="document.getElementById('imagen').click()">Subir Imagen</button>
+            <div class="cuadro-fotoEPM">
+                <label for="imagen" class="boton-imagenEPM">
+                    <img src="img/dog.jpg" alt="Subir foto">
+                </label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
             </div>
             <h4>Cartilla de vacunación</h4>
             <input type="file" id="archivo">
@@ -55,8 +54,8 @@
             <option value="opcion3">Nose otra cosa</option>
         </select>
         <h4>Descripción</h4>
-        <textarea class="columna-input-3" type="text" placeholder="Este es Mili, es un gato naranja, no es muy listo, le gusta morder botas y huele como a cheetos cuando se acuesta en la tierra."></textarea>
-        <button class="boton-Registrar" type="button">Registrar</button>
+        <textarea class="columna-input-3" type="text" placeholder="Valto es un perrito muy leal e inteligente. Es un poco distraído pero muy juguetón. "></textarea>
+        <button class="boton-Registrar" type="button">Actualizar</button>
     </div>
         <div class="columna">
         <h4>Fecha de nacimiento</h4>
@@ -64,7 +63,7 @@
         <h4>Raza</h4>
         <input type="text" placeholder="Nose, Naranja">
         <h4>Especificaciones de salud</h4>
-        <textarea class="columna-input-2" type="text" placeholder="Saludable mi niño"></textarea>
+        <textarea class="columna-input-2" type="text" placeholder="Esta mas vivo que nunca"></textarea>
         <h4>Publicar para</h4>
         <form>
             <label class="container">Adopción

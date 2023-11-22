@@ -376,6 +376,35 @@ footer{
     margin-bottom: 5px;
     
 }
+/*Edicionperfilmascota*/
+.cuadro-fotoEPM {
+    border: 2px dashed #0DCEDA;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 45px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.boton-imagenEPM {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.cuadro-fotoEPM img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
 
 /*registromascotas*/
 .button-Mascotas{
@@ -398,6 +427,7 @@ footer{
         background: none;
         cursor: pointer;
 }
+
 .imagen{
     height: 35px;
     width: 35px;
