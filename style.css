@@ -362,7 +362,7 @@ footer{
     font-size: 16px;
     transition: transform 0.3s ease;
     margin-top: 21px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
     
 .cuadro-R button:hover{
@@ -404,6 +404,156 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: contain; 
+}
+
+/*login*/
+.titulo-L h1{
+    color:#363940;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 9%;
+}
+
+.titulo-L h2{
+    color: #363940;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    margin-left: 8%;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.cuadro-L{
+    border: 1px solid #C7C8CA;
+    text-align: left;
+    float: left;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 8%;
+}
+
+.cuadro-L h4{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.cuadro-L input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cuadro-L .forgot-pass{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: #0DCEDA;
+    font-size: small;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.cuadro-L button{
+    width: 100%;
+    padding: 10px 53px;
+    background-color: #0DCEDA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cuadro-L button:hover{
+    transform: scale(1.1);
+}
+
+.cuadro-L hr{
+    width: 35%;
+    border: 0.5px solid #8B8C8C;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+}
+
+.cuadro-L .button-Google{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #FFFFFF;
+    color: hsl(200, 3%, 18%);
+    border: 1px solid #2D2F30;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-image: url(img/google.png);
+    background-size: 20px;
+    background-position: 95px center;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 15px;
+}
+
+.cuadro-L .button-Google:hover{
+    transform: scale(1.1);
+}
+
+.cuadro-L .guest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0DCEDA;
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+
+.img-L{
+    position: absolute;
+    border-radius: 10px;
+    right: 60px;
+    top: 3%;
+    width: 45%;
+    height: auto;
+}
+
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.signup a{
+    color: #0DCEDA;
+    margin-left: 5px;
+}
+
+.signup a:hover{
+    text-decoration: underline;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
 }
 
 /*registromascotas*/
