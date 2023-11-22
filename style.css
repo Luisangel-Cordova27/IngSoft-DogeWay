@@ -32,6 +32,7 @@ body{
 .landing-nav a{
     font-size: 16px;
     text-decoration: none;
+    color: black;
 }
 
 .landing-nav a:visited{
@@ -191,7 +192,7 @@ body{
     width: 80%;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: 20px;
+    gap: 5%;
     padding-top: 42px;
     padding-bottom: 91px;
 }
@@ -312,10 +313,11 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 0;
+    font-size: 40px;
 }
 
 .titulo-R h2{
-    color: #363940;
+    color: #667085;
     display: flex;
     align-items: center;
     justify-content: center;
