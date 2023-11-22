@@ -278,7 +278,6 @@ footer{
     margin: auto;
     padding-left: 50px;
 }
-
 .row{
     margin: auto;
     padding-left: 100px;
@@ -288,23 +287,46 @@ footer{
 .element{
     display: inline-block;
     border: 1px solid #858585;
+    width: 20%;
     margin: 20px;
-    padding: 110px;
-    /*
+    padding: 10px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
-    */
     box-shadow: 10px 10px lightblue;
-
 }
-.contentbox{
+
+
+/* Catalogo */
+
+section.catalogo{
+    padding-left: 20px;
+}
+
+section.titulocatalogo{
     display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.titulocatalogo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
 }
 
-.box_user{
-     align-items: flex-start;
-     float: left;
+.titulomypets h1{
+    display: inline;
+    font-size: 40px;
+    font-weight: bold;
 }
+
+
+.headliner2{
+    padding-left: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
 
 /*registro usuario*/
 .titulo-R h1{
