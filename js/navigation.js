@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    var misMascotasButton = document.querySelector('#misMascotas');
+    var misMascotasButton = document.querySelector('#misMascotasButton');
     if (misMascotasButton) {
         misMascotasButton.addEventListener('click', function() {
             window.location.href = 'misMascotas.php';

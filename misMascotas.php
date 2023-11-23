@@ -24,9 +24,9 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><button class="button-Register" id="adopcion">ADOPCIÓN</button></li>
-                    <li><button class="button-Register" id="listaMatches">LISTA DE MATCHES</button></li>
-                    <li><button class="button-Register" id="misMascotas">MIS MASCOTAS</button></li>
+                    <li><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></li>
+                    <li><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></li>
+                    <li><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></li>
                     <li><a href="">Cerrar sesión</a></li>
                 </ul>
             </nav>
