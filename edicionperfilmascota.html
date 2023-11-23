@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <title>Edicion de perfil de Mascota</title>
+</head>
+<body>
+    <header >
+        <div class="container-header">
+            <h1> 
+                <a href="landingPage.html">
+                    <img src="img/Logo.png" alt="logo">
+                </a>
+            </h1>
+
+            <nav class="landing-nav">
+                <ul class="opciones-landing">                   
+                    <li>
+                        <button class="button-Register" id="adopcionButton">ADOPCIÓN</button>
+                        <button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button>
+                        <button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button>
+                        <button class="boton-imagen" type="button">
+                            <img class="imagen" src="img/notificacion.png" alt="Notificaciones">
+                        </button>  
+                    </li>                  
+                    <li><a href="">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="titulo-RM">
+        <h1><span style="color: #0DCEDA;">Editar&nbsp;</span>Mascota</h1>
+    </div>
+    <div class="cuadro-RM">
+        <div class="columna">
+            <div class="cuadro-fotoEPM">
+                <label for="imagen" class="boton-imagenEPM">
+                    <img src="img/dog.jpg" alt="Subir foto">
+                </label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+            </div>
+            <h4>Cartilla de vacunación</h4>
+            <input type="file" id="archivo">
+        </div>
+    
+        <div class="columna">
+        <h4>Nombre</h4>
+        <input type="text" placeholder="Mili Vicencio">
+        <h4>Especie</h4>
+        <select class="select-RM" id="opciones" name="opciones">
+            <option value="opcion0">Selecciona la especie</option>
+            <option value="opcion1">Perro</option>
+            <option value="opcion2">Gato</option>
+            <option value="opcion3">Conejo</option>
+            <option value="opcion3">Nose otra cosa</option>
+        </select>
+        <h4>Descripción</h4>
+        <textarea class="columna-input-3" type="text" placeholder="Valto es un perrito muy leal e inteligente. Es un poco distraído pero muy juguetón. "></textarea>
+        <button class="boton-Registrar" type="button">Actualizar</button>
+    </div>
+        <div class="columna">
+        <h4>Fecha de nacimiento</h4>
+        <input type="date">
+        <h4>Raza</h4>
+        <input type="text" placeholder="Nose, Naranja">
+        <h4>Especificaciones de salud</h4>
+        <textarea class="columna-input-2" type="text" placeholder="Esta mas vivo que nunca"></textarea>
+        <h4>Publicar para</h4>
+        <form>
+            <label class="container">Adopción
+                <input type="radio" name="opciones">
+                <span class="checkmark"></span>
+            </label>
+        
+            <label class="container">Cruza
+                <input type="radio" name="opciones">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+
+    </div>
+   
+    </div>
+    <footer>
+        <div class="footer_element_mascotas">
+            <h3>® 2023 DogeWay. All Rights reserved<h3><br>
+                <div class="footer_element_mascotas_imagenes">
+                    <img src="img/entypo-social_twitter-with-circle.png">
+                    <img src="img/entypo-social_linkedin-with-circle.png">
+                    <img src="img/twitter.png">
+                </div>
+        </div>
+    </footer>
+
+    <script src="./js/navigation.js"></script>
+</body>
+</html>

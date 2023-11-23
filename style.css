@@ -1,5 +1,5 @@
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -51,10 +51,12 @@ body{
     color: #FFFFFF;
     border: none;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .button-Register:hover{
     transform: scale(1.1);
+
 }
 
 .section-hero{
@@ -73,7 +75,7 @@ body{
 
 .eslogan h1{
     color: #0DCEDA;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     margin-top: 0;
 }
@@ -81,7 +83,7 @@ body{
 .eslogan h3{
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .button-eslogan{
@@ -95,6 +97,7 @@ body{
     transition: transform 0.3s ease;
     margin: 0 auto;
     display: block;
+    cursor: pointer;
 }
 
 .button-eslogan:hover{
@@ -121,7 +124,7 @@ body{
 }
 
 .titulo-why h1{
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
     color: #2D2F30;
     margin-top: 0;
@@ -158,7 +161,7 @@ body{
 .caracteristicas-why div p{
     width: auto;
     padding: 0 20px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #363940;
     margin: 0;
@@ -199,6 +202,7 @@ body{
 
 #collage-1{
     width: 60%;
+    height: 60%;
 }
 
 #collage-2{
@@ -207,6 +211,7 @@ body{
 
 #collage-3{
     width: 60%;
+    height: 35%;
 }
 
 #collage-4{
@@ -276,19 +281,53 @@ footer{
     margin: auto;
     padding-left: 50px;
 }
+.row{
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 50px;
+}
 
 .element{
     display: inline-block;
     border: 1px solid #858585;
     width: 20%;
-    margin: 10px;
-    padding: 20px;
-    /*
+    margin: 20px;
+    padding: 10px;
     -moz-border-radius: 7px;
-    border-radius: 7px;
     -webkit-border-radius: 7px;
-    */
     box-shadow: 10px 10px lightblue;
+}
+
+
+/* Catalogo */
+
+section.catalogo{
+    padding-left: 20px;
+}
+
+section.titulocatalogo{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.titulocatalogo h1{
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.titulomypets h1{
+    display: inline;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.headliner2{
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -348,7 +387,7 @@ footer{
     font-size: 16px;
     transition: transform 0.3s ease;
     margin-top: 21px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
     
 .cuadro-R button:hover{
@@ -362,81 +401,34 @@ footer{
     margin-bottom: 5px;
     
 }
-
-/*Registro usuario 2 */
-.form-completaInfo{
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #E2E4E5;
+/*Edicionperfilmascota*/
+.cuadro-fotoEPM {
+    border: 2px dashed #0DCEDA;
+    padding: 10px;
     border-radius: 8px;
-}
-
-.contenedor-input{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 45px;
+    width: 250px;
+    height: 300px;
     display: flex;
-    gap: 9%;
-    margin-top: 78px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.contenedor-input div{
-    display: block;
-    width: 27%;
+.boton-imagenEPM {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
 }
 
-.contenedor-input div label{
-    display: block;
-}
-
-.contenedor-input div .input-registro{
-    display: block;
+.cuadro-fotoEPM img {
     width: 100%;
-    border: 1px solid #D0D5DD;
-    border-radius: 8px;
-    padding: 10px 14px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #667085;
-}
-
-.input-file{
-    display: block;
-    width: 100%;
-    border: 1px solid #D0D5DD;
-    border-radius: 8px;
-    padding: 10px 14px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #667085;
-}
-
-/*Fin de registro usuario 2 */
-
-
-.cuadro-R .lineas-y-o {
-    display: flex;
-    align-items: center; 
-  }
-
-.cuadro-R .button-Google{
-    width: 100%;
-    padding: 10px 0px;
-    background-color: #FFFFFF;
-    color: hsl(200, 3%, 18%);
-    border: 1px solid #2D2F30;
-    border-radius: 10px;
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    background-image: url(img/google.png);
-    background-size: 20px;
-    background-position: 95px center;
-    background-repeat: no-repeat;
-    text-align: center;
-    line-height: 15px;
-}
-
-.cuadro-R .button-Google:hover{
-    transform: scale(1.1);
+    height: 100%;
+    object-fit: contain; 
 }
 
 /*login*/
@@ -513,7 +505,7 @@ footer{
     margin-top: 30px;
     margin-bottom: 10px;
 }
-    
+
 .cuadro-L button:hover{
     transform: scale(1.1);
 }
@@ -523,7 +515,7 @@ footer{
     border: 0.5px solid #8B8C8C;
     margin-top: 15px;
     margin-bottom: 5px;
-    
+
 }
 
 .cuadro-L .button-Google{
@@ -549,20 +541,6 @@ footer{
     transform: scale(1.1);
 }
 
-.cuadro-L .signup{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: small;
-    margin-top: 10px;
-}
-
-.cuadro-L .signup a{
-    color: #0DCEDA;
-    text-decoration: underline;
-    margin-left: 5px;
-}
-
 .cuadro-L .guest{
     display: flex;
     align-items: center;
@@ -582,6 +560,249 @@ footer{
     height: auto;
 }
 
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.signup a{
+    color: #0DCEDA;
+    margin-left: 5px;
+}
+
+.signup a:hover{
+    text-decoration: underline;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+/*registromascotas*/
+.button-Mascotas{
+    padding: 10px 53px;
+    border-radius: 68px;
+    font-size: 16px;
+    background-color: #0DCEDA;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.button-Mascotas:hover{
+    transform: scale(1.1);
+}
+
+.boton-imagen {
+        border: none;
+        background: none;
+        cursor: pointer;
+}
+
+.imagen{
+    height: 35px;
+    width: 35px;
+}
+
+.footer_element_mascotas{
+    background-color: #249ca4;
+    color: #FFFFFF;
+    padding-left: auto;
+    padding-top: auto;
+    align-items: center;
+    font-size: small;
+    display: flex;
+}
+.footer_element_mascotas h3 {
+    margin-right: auto;
+    margin-left: auto;  
+}
+.footer_element_mascotas img {
+    margin-left: 15px; 
+}
+.footer_element_mascotas_imagenes {
+    margin-left: 600px; 
+}
+
+.titulo-RM h1{
+    color:#363940;
+    display: flex;
+    justify-content: left;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.titulo-RM h2{
+    color: #363940;
+    display: flex;
+    justify-content: left;
+    margin-left: 70px;
+    font-size: 18px;
+    font-weight: normal;
+    
+}
+.cuadro-RM{
+    border: 1px solid #C7C8CA;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: auto;
+    text-align: left;
+}
+
+.cuadro-foto {
+    border: 2px dashed #0DCEDA;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 45px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#imagen {
+    display: none; 
+}
+
+.cuadro-foto img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 55px;
+    text-align: center;
+    align-items: center;
+}
+
+.formatos-aceptados {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.boton-subir {
+    padding: 10px 20px;
+    background-color: #0DCEDA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-subir:hover {
+    transform: scale(1.1);
+}
+      
+.columna {
+    flex: 1; 
+    max-width: auto;
+}
+.columna h4 {
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
+.columna input {
+    width: 80%;
+    padding: 10px;
+    margin-top: auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.columna-input-2{
+    font-size: 16px;
+    height: 80px;
+    box-sizing: border-box; 
+    width: 80%; 
+    overflow: auto; 
+    border-radius: 5px;
+}
+.columna-input-3{
+    font-size: 16px;
+    height: 150px;
+    box-sizing: border-box; 
+    width: 80%; 
+    overflow: auto;  
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+}
+label {
+    display: flex;
+    color: #292E3D;
+}
+
+input[type="radio"] {
+    display: none; 
+    margin-left: 10px;
+}
+
+.container {
+    position: relative;
+    margin-left: 30px; 
+    margin-top: -145px;
+    margin-bottom: -130px;
+}
+
+.checkmark {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #0DCEDA;
+    position: absolute;
+    left: -25px;
+}
+
+input[type="radio"]:checked + .checkmark {
+    background-color: #0DCEDA;
+}
+
+.select-RM {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px
+}
+
+select option {
+    font-size: 14px;
+}
+
+.boton-Registrar{
+    width: 75%;
+    padding: 10px 53px;
+    background-color: #0DCEDA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+.boton-Registrar:hover {
+    transform: scale(1.1);
+}
 
 .titulo{
     display: flex;
@@ -608,7 +829,7 @@ footer{
 
 .container-collage{
     display: flex;
-    width: 90%;
+    width: 80%;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;

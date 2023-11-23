@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $idSesion = session_id();
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -6,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <title>Dogeway - Adopcion </title>
+    <title>Mis Mascotas - Dogeway </title>
 </head>
 <body>
     <header>
@@ -19,31 +24,33 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><a href="login.php">Iniciar sesión</a></li>
-                    <li><button class="button-Register">Registrarse</button></li>
+                    <li><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></li>
+                    <li><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></li>
+                    <li><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></li>
+                    <li><a href="">Cerrar sesión</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="titulocatalogo">
-        <div class="headliner">
+    <section class="titulomypets">
+        <div class="headliner2">
             <div class="texto">
-            <h1 style='color:#0DCEDA;'>Catálogo</h1>
+            <h1 style='color:#0DCEDA;'>Mis  </h1>
             </div>
-            <div class="texto">
-            <u style="text-decoration: underline;"><h1>Adopción</h1></u>
+            <div class="texto" style="padding-left: 8px;">
+            <u><h1>   Mascotas</h1></u>
             </div>
+            <br>
+            <h2>Haz click en la foto de la mascota para ver más detalles c: </h2>
         </div>
-        <br><br>  
-    </section><br>
-    <center><h2>Haz click en la foto de la mascota para ver más detalles c: </h2><center>
+    </section>
+   
     <section class="catalogo" id="adopcion">
-
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE adopcion = 1 LIMIT 8";
+            $sql = "SELECT * FROM mascota WHERE adopcion = 1";
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
