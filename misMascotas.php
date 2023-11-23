@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <title>Mis Mascotas - Dogeway </title>
 </head>
 <body>
@@ -24,9 +24,9 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><button class="button-Register">ADOPCIÓN</button></li>
-                    <li><button class="button-Register">LISTA DE MATCHES</button></li>
-                    <li><button class="button-Register">MIS MASCOTAS</button></li>
+                    <li><button class="button-Register" id="adopcion">ADOPCIÓN</button></li>
+                    <li><button class="button-Register" id="listaMatches">LISTA DE MATCHES</button></li>
+                    <li><button class="button-Register" id="misMascotas">MIS MASCOTAS</button></li>
                     <li><a href="">Cerrar sesión</a></li>
                 </ul>
             </nav>
@@ -39,7 +39,7 @@
             <h1 style='color:#0DCEDA;'>Mis  </h1>
             </div>
             <div class="texto" style="padding-left: 8px;">
-            <u style="text-decoration: underline;"><h1>   Mascotas</h1></u>
+            <u><h1>   Mascotas</h1></u>
             </div>
             <br>
             <h2>Haz click en la foto de la mascota para ver más detalles c: </h2>
@@ -94,11 +94,11 @@
         <div class="info-footer">
             <div class="datos-footer">
                 <ul>
-                    <li><span class="datos-titulo">DIRECCIÓN:</span><span class="datos-texto">6391 Elgin St. Celina, Delaware 10299</span></li>
+                    <li><span class="datos-titulo">DIRECCIÓN:</span><span class="datos-texto">Centro Universitario de Ciencias Exactas e Ingenierías &#40;CUCEI&#41;</span></li>
 
                     <li><span class="datos-titulo">TELEFONO:</span><span class="datos-texto">+84 1102 2703</span></li>
 
-                    <li><span class="datos-titulo">CORREO ELECTRÓNICO:</span><span class="datos-texto">hello@thebox.com</span></li>
+                    <li><span class="datos-titulo">CORREO ELECTRÓNICO:</span><span class="datos-texto">hello@dogeway.com</span></li>
                 </ul>
             </div>
             <div class="iconos-footer">
@@ -118,5 +118,7 @@
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
         </div>
     </footer>
+
+    <script src="./js/navigation.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css?v=1.1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <title>DogeWay - Home</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li><a href="login.php">Iniciar sesión</a></li>
                     <li><button class="button-Register">Registrarse</button></li>
                 </ul>
             </nav>
@@ -32,7 +32,7 @@
             <h1>Encuentra amor en cada huella</h1>
 
             <h3>Encuentra a tu compañero peludo para siempre en DogeWay: ¡Amor a primera pata y adopción para siempre!</h3>
-            <button class="button-eslogan">Registrarse</button>
+            <button class="button-eslogan" id="registerButton">Registrarse</button>
         </div>
 
     </section>
@@ -89,7 +89,7 @@
             <img id="collage-4" src="img/collage-2.png">
         </div>
 
-        <button class="button-eslogan">Explorar Catálogo</button>
+        <button class="button-eslogan" id="catalogButton">Explorar Catálogo</button>
     </section>
 <br>
     <footer class="landingpage">
@@ -120,5 +120,7 @@
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
         </div>
     </footer>
+
+    <script src="./js/navigation.js"></script>
 </body>
 </html>

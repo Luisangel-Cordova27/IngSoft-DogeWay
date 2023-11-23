@@ -1,5 +1,5 @@
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -51,10 +51,12 @@ body{
     color: #FFFFFF;
     border: none;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .button-Register:hover{
     transform: scale(1.1);
+
 }
 
 .section-hero{
@@ -73,7 +75,7 @@ body{
 
 .eslogan h1{
     color: #0DCEDA;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     margin-top: 0;
 }
@@ -81,7 +83,7 @@ body{
 .eslogan h3{
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .button-eslogan{
@@ -95,6 +97,7 @@ body{
     transition: transform 0.3s ease;
     margin: 0 auto;
     display: block;
+    cursor: pointer;
 }
 
 .button-eslogan:hover{
@@ -121,7 +124,7 @@ body{
 }
 
 .titulo-why h1{
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
     color: #2D2F30;
     margin-top: 0;
@@ -158,7 +161,7 @@ body{
 .caracteristicas-why div p{
     width: auto;
     padding: 0 20px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #363940;
     margin: 0;
@@ -324,7 +327,7 @@ section.titulocatalogo{
 
 .headliner2{
     padding-left: 50px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -587,6 +590,7 @@ a:-webkit-any-link {
     color: #FFFFFF;
     border: none;
     margin-right: 5px;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -630,7 +634,7 @@ a:-webkit-any-link {
     display: flex;
     justify-content: left;
     margin-left: 70px;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .titulo-RM h2{

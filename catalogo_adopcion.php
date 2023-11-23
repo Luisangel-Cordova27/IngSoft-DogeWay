@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <title>Dogeway - Adopcion </title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><a href="">Iniciar sesión</a></li>
+                    <li><a href="login.php">Iniciar sesión</a></li>
                     <li><button class="button-Register">Registrarse</button></li>
                 </ul>
             </nav>
@@ -87,11 +87,11 @@
         <div class="info-footer">
             <div class="datos-footer">
                 <ul>
-                    <li><span class="datos-titulo">DIRECCIÓN:</span><span class="datos-texto">6391 Elgin St. Celina, Delaware 10299</span></li>
+                    <li><span class="datos-titulo">DIRECCIÓN:</span><span class="datos-texto">Centro Universitario de Ciencias Exactas e Ingenierías &#40;CUCEI&#41;</span></li>
 
                     <li><span class="datos-titulo">TELEFONO:</span><span class="datos-texto">+84 1102 2703</span></li>
 
-                    <li><span class="datos-titulo">CORREO ELECTRÓNICO:</span><span class="datos-texto">hello@thebox.com</span></li>
+                    <li><span class="datos-titulo">CORREO ELECTRÓNICO:</span><span class="datos-texto">hello@dogeway.com</span></li>
                 </ul>
             </div>
             <div class="iconos-footer">
@@ -111,5 +111,7 @@
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
         </div>
     </footer>
+
+    <script src="./js/navigation.js"></script>
 </body>
 </html>

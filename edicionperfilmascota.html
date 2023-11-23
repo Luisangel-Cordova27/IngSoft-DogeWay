@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <title>Edicion de perfil de Mascota</title>
 </head>
 <body>
@@ -18,19 +18,21 @@
             </h1>
 
             <nav class="landing-nav">
-                <ul class="opciones-landing">
-                    
-                    <li><button class="button-Mascotas">ADOPCIÓN</button>
-                    <button class="button-Mascotas">LISTA DE MATCHES</button>
-                    <button class="button-Mascotas">MIS MASCOTAS</button>
-                    <button class="boton-imagen" type="button">
-                        <img class="imagen" src="img/notificacion.png" alt="Notificacione">
-                    </button>  </li>                  
+                <ul class="opciones-landing">                   
+                    <li>
+                        <button class="button-Mascotas">ADOPCIÓN</button>
+                        <button class="button-Mascotas">LISTA DE MATCHES</button>
+                        <button class="button-Mascotas" id="misMascotas">MIS MASCOTAS</button>
+                        <button class="boton-imagen" type="button">
+                            <img class="imagen" src="img/notificacion.png" alt="Notificaciones">
+                        </button>  
+                    </li>                  
                     <li><a href="">Cerrar sesión</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="titulo-RM">
         <h1><span style="color: #0DCEDA;">Editar&nbsp;</span>Mascota</h1>
     </div>
@@ -95,5 +97,7 @@
                 </div>
         </div>
     </footer>
+
+    <script src="./js/navigation.js"></script>
 </body>
 </html>
