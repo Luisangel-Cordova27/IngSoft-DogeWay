@@ -741,15 +741,7 @@ a:-webkit-any-link {
     overflow: auto;  
     border-radius: 5px;
 }
-/*
-form {
-    display: flex;
-}
-label {
-    display: flex;
-    color: #292E3D;
-}
-*/
+
 input[type="radio"] {
     display: none; 
     margin-left: 10px;
