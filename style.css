@@ -680,3 +680,31 @@ section.titulocatalogo{
     font-size: 48px;
     font-weight: bold;
 }
+
+/*Pagina match */
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user p{
+    display: inline;
+    margin-left: 20px;
+}
+
+#left-match{
+    box-sizing: border-box;
+    padding: 20px 24px;
+    border-radius: 15px;
+    width: 40%;
+    border: 1px solid #F2F7FF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#right-match{
+    width: 58%;
+    border: 1px solid #F2F7FF;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+/*Fin pagina match */
