@@ -16,7 +16,11 @@
 <body>
     <header>
         <div class="container-header">
-            <h1><img src="img/Logo.png" alt="logo"></h1>
+            <h1> 
+                <a href="landingPage.html">
+                    <img src="img/Logo.png" alt="logo">
+                </a>
+            </h1>
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
