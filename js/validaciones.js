@@ -13,7 +13,7 @@ function validacionRegistro1(){
         }, 5000);
     }
     else{
-        //form.submit();
+        form.submit();
         console.log("Correo no repetido");
             
     }
