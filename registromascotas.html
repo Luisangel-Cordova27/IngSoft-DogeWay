@@ -36,52 +36,53 @@
         <h1><span style="color: #0DCEDA;">Agrega&nbsp;</span>Mascota</h1>
         <h2>Por favor completa la información de tu mascota</h2>
     </div>
+
+
+<form onsubmit="return recibe();" name="registroMasc" id="registroMasc" method="POST" action="./funciones/mascotas_alta.php">
     <div class="cuadro-RM">
         <div class="columna">
             <div class="cuadro-foto">
                     <img src="./img/icono_regis_masco.png" alt="Subir foto">
                     <div class="formatos-aceptados">Formatos aceptados: JPEG, PNG</div>
-                    <input type="file" id="imagen" name="imagen" accept="image/*">
-                <button class="boton-subir" onclick="document.getElementById('imagen').click()">Subir Imagen</button>
+                    <input type="file" id="archivo" name="archivo" accept="image/*" required>
             </div>
             <h4>Cartilla de vacunación</h4>
-            <input type="file" id="archivo">
+            <input type="file" id="archivo" name="archivo">
         </div>
     
         <div class="columna">
         <h4>Nombre</h4>
-        <input type="text" placeholder="Mili Vicencio">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre de mascota..." required>
         <h4>Especie</h4>
-        <select class="select-RM" id="opciones" name="opciones">
-            <option value="opcion0">Selecciona la especie</option>
-            <option value="opcion1">Perro</option>
-            <option value="opcion2">Gato</option>
-            <option value="opcion3">Conejo</option>
-            <option value="opcion3">Nose otra cosa</option>
+        <select class="select-RM" id="opciones" name="opciones" required>
+            <option value="">Selecciona la especie</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Conejo">Conejo</option>
+            <option value="Otros...">Nose otra cosa</option>
         </select>
         <h4>Descripción</h4>
-        <textarea class="columna-input-3" type="text" placeholder="Este es Mili, es un gato naranja, no es muy listo, le gusta morder botas y huele como a cheetos cuando se acuesta en la tierra."></textarea>
-        <button class="boton-Registrar" type="button">Registrar</button>
+        <textarea class="columna-input-3" type="text" placeholder="Añada una descripcion de su mascota..." id="desc" name="desc" required>
+
+        </textarea>
+        <button class="boton-Registrar" type="submit" id="subir">Registrar</button>
     </div>
         <div class="columna">
         <h4>Fecha de nacimiento</h4>
-        <input type="date">
+        <input type="date" id="fecha" name="fecha" required>
         <h4>Raza</h4>
-        <input type="text" placeholder="Nose, Naranja">
+        <input type="text" placeholder="Tipo de raza..." id="raza" name="raza" required>
         <h4>Especificaciones de salud</h4>
-        <textarea class="columna-input-2" type="text" placeholder="Saludable mi niño"></textarea>
+        <textarea class="columna-input-2" type="text" id="condicion" name="condicion" placeholder="Añada una descripción médica de su mascota..." required></textarea>
         <h4>Publicar para</h4>
-        <form>
             <label class="container">Adopción
-                <input type="radio" name="opciones">
-                <span class="checkmark"></span>
-            </label>
-        
+                <input type="radio" id="adopcion" name="tipo" value="1" checked>
+                <span class="checkmark"></span> 
             <label class="container">Cruza
-                <input type="radio" name="opciones">
+                <input type="radio" id="cruza" name="tipo" value="0">
                 <span class="checkmark"></span>
             </label>
-        </form>
+</form>
 
 
     </div>
