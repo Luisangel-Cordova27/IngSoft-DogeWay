@@ -1,3 +1,6 @@
+<?php
+    $id_usuario = $_GET['id_usuario'];  
+?>
 <!doctype html>
 <html>
 <head>
@@ -29,8 +32,8 @@
                 <h2 style="justify-content: left; padding: 15px 0;">Por favor llena todos los campos para terminar tu perfil</h2>
             </div>
 
-            <form action="" class="form-completaInfo">
-
+            <form name="registrousuario2" id="registrousuario2" method="post" action="usuario_alta2.php" class="form-completaInfo">
+            <input type="hidden" name="id" id = "id" value="<?php echo $id_usuario?>" readonly/>
                 <div class="contenedor-input" style="margin: 0;">
                     <div>
                         <label for="nombre">Nombre</label>
@@ -50,8 +53,8 @@
 
                 <div class="contenedor-input">
                     <div>
-                        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-                        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="input-registro">
+                        <label for="fecha-nacimiento">Edad</label>
+                        <input type="text" name="fecha-nacimiento" id="fecha-nacimiento" class="input-registro">
                     </div>
 
                     <div>
@@ -91,7 +94,7 @@
                 </div>
 
                 <div class="cuadro-R" style="border: none;">
-                    <button type="button">Registrarse</button>
+                    <button type="submit">Registrarse</button>
                 </div>
             </form>  
         </div>

@@ -26,21 +26,21 @@
         <h1><span style="color: #0DCEDA;">Crea&nbsp;</span>Tu Cuenta</h1>
         <h2>Por favor llena el formulario para crear tu cuenta</h2>
     </div>
-
+<form name="registrousuario" id="registrousuario" method="post" action="usuario_alta.php">
     <div class="cuadro-R">
         <h4>Nombre de usuario</h4>
-        <input type="text" placeholder="Nombre de usuario">
+        <input type="text" id="usuarioname" name="usuarioname" placeholder="Nombre de usuario">
         <h4>Correo electrónico</h4>
-        <input type="text" placeholder="Correo electrónico">
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
         <h4>Contraseña</h4>
-        <input type="text" placeholder="Contraseña">
-        <button type="button">Continuar</button>
+        <input type="password" id="pasw", name="pasw" placeholder="Contraseña">
+        <button type="submit">Continuar</button>
         <div class="signup">
             ¿Ya tienes una cuenta?  
-            <a href=login.php>Inicia Sesión</a>
+            <a href="login.php">Inicia Sesión</a>
         </div>
     </div>
-
+</form>
     <script src="./js/navigation.js"></script>
 </body>
 </html>
