@@ -1,36 +1,55 @@
 <?php
 
+// Include the connection file (conecta.php)
 require "conecta.php";
-///
-$file_name = $_FILES['archivo']['name']; ///NOMBRE REAL DEL ARCHIVO
-$file_tmp = $_FILES['archivo']['tmp_name']; ///NOMBRE TEMPORAL DEL ARCHIVO ///COPIA TEMPORAL DEL ARCHIVO
-$cadena = explode(".", $file_name); ///SEPARA EL NOMBRE PARA OBTENER LA EXTENSION
-$ext = $cadena[1]; /// EXTENSION
-$dir = "../img_mascotas/";  ////CARPETA DONDE SE GUARDAN LOS ARCHIVOS
-$file_enc = md5_file($file_tmp); ///NOMBRE DEL ARCHIVO ENCRIPTADO, me genera una cadena en base al contenido del archivo, el contenido es unico
 
+echo var_dump($_FILES);
+// Get file details
+$file_name = $_FILES['archivo']['name'];
+$file_tmp = $_FILES['archivo']['tmp_name'];
+$ext = pathinfo($file_name, PATHINFO_EXTENSION);
+$dir = "../img_mascotas/";
+$file_enc = md5_file($file_tmp);
+
+// Generate a unique filename
 $fileName1 = "$file_enc.$ext";
-copy($file_tmp, $dir.$fileName1);
+$destination = $dir.$fileName1;
 
+// Move and rename the uploaded file
+if (move_uploaded_file($file_tmp, $destination)) {
+    // File uploaded successfully
 
-///HACER FORMATO PARA CONCATENAR NOMBRE DE ARCHIVO DE VACUNAS
-/// CON EL NOMBRE DEL USUARIO
+    // Get other form data
+    $con = conecta();
+    $nombre = $_POST['nombre'];
+    $opciones = $_POST['opciones'];
+    $descripcion = $_POST['desc'];
+    $sexo = $_POST['sexo'];
+    $fecha = $_POST['fecha'];
+    $raza = $_POST['raza'];
+    $condicion = $_POST['condicion'];
+    $tipo = $_POST['tipo'];
 
-$con = conecta();
-$nombre = $_POST['nombre'];
-$opciones = $_POST['opciones'];
-$descripcion = $_POST['desc'];
-$fecha = $_POST['fecha'];
-$condicion = $_POST['condicion'];
-$tipo = $_POST['tipo'];
+    // Insert data into the database
+    $sql = "INSERT INTO mascota (nombre, raza, caracteristicas, 
+            color, marcas_especiales, sexo, edad, adopcion, foto, dueno) 
+            VALUES('$nombre','$opciones','$descripcion', '$raza', 
+            '$condicion', '$sexo', '$fecha', '$tipo', '$fileName1', '1')";
+    $res = $con->query($sql);
 
-
-
-$sql = "INSERT INTO mascotas (nombre, raza, caracteristicas, 
-color, marcas_especiales, fecha_nac, adopcion, foto, dueno) 
-VALUES('$nombre','$opciones','$descripcion', 'nose', '$condicion', '$fecha', '$tipo', '$fileName1', '1')";
-$res = $con->query($sql);
+    if ($res) {
+        // Data inserted successfully
+        ?>
+        <script language="javascript">
+            window.location.replace("../misMascotas.php");
+        </script>
+        <?php
+    } else {
+        // Error inserting data
+        echo "Error inserting data: " . $con->error;
+    }
+} else {
+    // Error uploading file
+    echo "Error uploading file.";
+}
 ?>
-<script language="javascript">
-    window.location.replace("B1_ListaDeAdmins.php");
-</script>

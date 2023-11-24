@@ -68,7 +68,7 @@
                                 <img src="./img/user_icon.png" style="height:30px;">'.$nombre.'</p>
                             </div>';
                             ?>
-                           <a href="detalleMascota.php"><img src="./img/collage-1.png" style="height: 175px; width: 250px; align-items:center;"/></a>
+                           <a href="detalleMascota.php"><img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
                             <?php
                             echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$nombre.'</p>';
                             echo '<p class="razaAnimal" style="font-size:15px; float:left; color: gray;">'.$raza.'</p>';
