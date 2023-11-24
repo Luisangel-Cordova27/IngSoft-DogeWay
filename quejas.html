@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>Formato de quejas</title>
 </head>
 <body>
+    <header >
+        <div class="container-header">
+            <h1> 
+                <a href="landingPage.html">
+                    <img src="img/Logo.png" alt="logo">
+                </a>
+            </h1>
+
+            <nav class="landing-nav">
+                <ul class="opciones-landing">                   
+                    <li>
+                        <button class="button-Register" id="adopcionButton">ADOPCIÓN</button>
+                        <button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button>
+                        <button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button>
+                     
+                    </li>                  
+                    <li><a href="">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form action="">
+        <div class="contenedor">
+
+            <div class="name"></div>
+            
+            <div class="contenedor_formulario"></div>
+            <span class="fecha_incidente">Fecha del Incidente: </span>
+            <div class="campoIncidente">
+                <input type="date" id="fechaIncidente" name="fechaIncidente">
+            </div>
+            <span class="usuario_report">Usuario a reportar:</span>
+            <div class="usuarioReportado">
+                <input type="text" id="usuarioReport" name="usuarioReport" placeholder="gatitofeliz">
+            </div>
+            <span class="nom_usuario">Nombre del Usuario:</span>
+            <div class="nombreUsuario">
+                <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Juan">
+            </div>
+            <div class="apellidoUsuario">
+                <input type="text" id="apellidoUsuario" name="apellidoUsuario" placeholder="Perez">
+            </div>
+            <span class="ubi_incidentes">Ubicación del Incidente: </span>
+            <div class="campoUbi">
+                <input type="text" id="ubicacionIncidente" name="ubicacionIncidente">
+            </div>
+            <span class="details">Detalles del incidente: </span>
+            <div class="campoDetalles">
+                <input type="text" id="detallesIncidente" name="detallesIncidente">
+            </div>
+           
+            <span class="titulo">Formato de Quejas</span>
+            <button type="submit" id="enviarBtn" >Enviar Formulario</button>
     
+            <div class="lineas"></div>
+            <div class="logoUbi"></div>
+        </div>
+    </form>
+
+    <footer class="landingpage">
+        <div class="footer_element">
+            <h3>® 2023 DogeWay. All Rights reserved<h3><br>
+        </div>
+    </footer>
+
 </body>
 </html>
