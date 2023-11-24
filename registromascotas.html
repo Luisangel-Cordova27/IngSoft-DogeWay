@@ -36,12 +36,13 @@
         <h1><span style="color: #0DCEDA;">Agrega&nbsp;</span>Mascota</h1>
         <h2>Por favor completa la información de tu mascota</h2>
     </div>
+    <form onsubmit="return recibe();" name="registroMasc" id="registroMasc" method="POST" action="">
     <div class="cuadro-RM">
         <div class="columna">
             <div class="cuadro-foto">
                     <img src="./img/icono_regis_masco.png" alt="Subir foto">
                     <div class="formatos-aceptados">Formatos aceptados: JPEG, PNG</div>
-                    <input type="file" id="imagen" name="imagen" accept="image/*">
+                    <input type="file" id="imagen" name="imagen" accept="image/*" required>
                 <button class="boton-subir" onclick="document.getElementById('imagen').click()">Subir Imagen</button>
             </div>
             <h4>Cartilla de vacunación</h4>
