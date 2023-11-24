@@ -6,6 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/validaciones.js"></script>
   <title>Registro - Cuenta</title>
 </head>
 <body>
@@ -31,16 +33,23 @@
         <h4>Nombre de usuario</h4>
         <input type="text" id="usuarioname" name="usuarioname" placeholder="Nombre de usuario">
         <h4>Correo electrónico</h4>
-        <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
+        <input type="email" id="correo" name="correo" onblur="validacionCorreo()" placeholder="Correo electrónico">
         <h4>Contraseña</h4>
         <input type="password" id="pasw", name="pasw" placeholder="Contraseña">
-        <button type="submit">Continuar</button>
+        <button type="button" id="boton-registro" onclick="validacionRegistro1()">Continuar</button>
         <div class="signup">
             ¿Ya tienes una cuenta?  
             <a href="login.php">Inicia Sesión</a>
         </div>
     </div>
 </form>
+    <div class="div-error" id="div-error">
+        <div class="error-campos" >
+            <img src="img/error-icon.png" style="margin-right: 10px;">
+            <p id="error-info"></p>
+        </div>
+    </div>
+
     <script src="./js/navigation.js"></script>
 </body>
 </html>

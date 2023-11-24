@@ -1005,3 +1005,20 @@ section.titulocatalogo{
 }
 
 /*Fin de registro usuario 2 */
+.div-error{
+    border: 1px solid #249ca4;
+     padding: 30px; 
+     border-radius: 10px; 
+     width: 400px; 
+     height: auto; 
+     margin: 15px auto;
+     display: none;
+}
+
+.error-campos{
+    justify-content: center;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
