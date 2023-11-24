@@ -43,7 +43,7 @@
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE adopcion = 1 LIMIT 8";
+            $sql = "SELECT * FROM mascota WHERE adopcion = 1 and DUENO != 1 LIMIT 8";
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
