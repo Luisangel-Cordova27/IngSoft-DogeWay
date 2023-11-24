@@ -43,7 +43,7 @@
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE adopcion = 1 and DUENO != 1 LIMIT 8";
+            $sql = "SELECT * FROM mascota WHERE adopcion = 1 LIMIT 8";
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
@@ -61,7 +61,7 @@
                                 <img src="./img/user_icon.png" style="height:30px;">'.$nombre.'</p>
                             </div>';
                             ?>
-                           <a href="detalleMascota.php"><img src="./img/collage-1.png" style="height: 175px; width: 250px; align-items:center;"/></a>
+                           <a href="detalleMascota.php"><img src="./img/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
                             <?php
                             echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$nombre.'</p>';
                             echo '<p class="razaAnimal" style="font-size:15px; float:left; color: gray;">'.$raza.'</p>';

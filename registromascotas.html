@@ -38,16 +38,16 @@
     </div>
 
 
-<form onsubmit="return recibe();" name="registroMasc" id="registroMasc" method="POST" action="./funciones/mascotas_alta.php">
+<form name="registroMasc" id="registroMasc" method="POST" action="./funciones/mascotas_alta.php" enctype="multipart/form-data">
     <div class="cuadro-RM">
         <div class="columna">
             <div class="cuadro-foto">
                     <img src="./img/icono_regis_masco.png" alt="Subir foto">
                     <div class="formatos-aceptados">Formatos aceptados: JPEG, PNG</div>
-                    <input type="file" id="archivo" name="archivo" accept="image/*" required>
+                    <input type="file" id="archivo" name="archivo" required>
             </div>
             <h4>Cartilla de vacunación</h4>
-            <input type="file" id="archivo" name="archivo">
+            <input type="file" id="cartilla" name="cartilla">
         </div>
     
         <div class="columna">
@@ -68,8 +68,8 @@
         <button class="boton-Registrar" type="submit" id="subir">Registrar</button>
     </div>
         <div class="columna">
-        <h4>Fecha de nacimiento</h4>
-        <input type="date" id="fecha" name="fecha" required>
+        <h4>Edad (años)</h4>
+        <input type="number" id="fecha" name="fecha" min="0" required>
         <h4>Raza</h4>
         <input type="text" placeholder="Tipo de raza..." id="raza" name="raza" required>
         <h4>Especificaciones de salud</h4>
@@ -82,6 +82,15 @@
                 <input type="radio" id="cruza" name="tipo" value="0">
                 <span class="checkmark"></span>
             </label>
+        <h4>Genero</h4>
+            <label class="container">Macho
+                <input type="radio" id="sexo" name="sexo" value="M" checked>
+                <span class="checkmark"></span> 
+            <label class="container">Hembra
+                <input type="radio" id="sexo" name="sexo" value="H">
+                <span class="checkmark"></span>
+            </label>
+    
 </form>
 
 
