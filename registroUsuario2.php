@@ -101,12 +101,17 @@
         
     </main>
 
-    <footer class="landingpage">
-        <div class="footer_element">
+    <footer>
+        <div class="footer_element_mascotas">
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
+                <div class="footer_element_mascotas_imagenes">
+                    <img src="img/entypo-social_twitter-with-circle.png">
+                    <img src="img/entypo-social_linkedin-with-circle.png">
+                    <img src="img/twitter.png">
+                </div>
         </div>
     </footer>
-
+    
     <script src="./js/navigation.js"></script>
 </body>
 </html>
