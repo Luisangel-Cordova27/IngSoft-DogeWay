@@ -1,5 +1,8 @@
 <?php
-    $id_usuario = $_GET['id_usuario'];  
+    if(isset($_GET['id_usuario'])){
+        $id_usuario = $_GET['id_usuario']; 
+    }
+     
 ?>
 <!doctype html>
 <html>
@@ -9,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/validaciones.js"></script>
   <title>Registro - Completa tu informacion</title>
 </head>
 <body>
@@ -93,8 +98,15 @@
                     </div>
                 </div>
 
-                <div class="cuadro-R" style="border: none;">
-                    <button type="submit">Registrarse</button>
+                <div class="div-error" id="div-error">
+                    <div class="error-campos" >
+                        <img src="img/error-icon.png" style="margin-right: 10px;">
+                        <p id="error-info"></p>
+                    </div>
+                </div>
+
+                <div class="cuadro-R" style="border: none; padding: 0; margin: 15px auto;">
+                    <button type="button" onclick="validacionRegistro2()">Registrarse</button>
                 </div>
             </form>  
         </div>
