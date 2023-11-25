@@ -37,6 +37,12 @@ if (move_uploaded_file($file_tmp, $destination)) {
             '$condicion', '$sexo', '$fecha', '$tipo', '$fileName1', '1')";
     $res = $con->query($sql);
 
+    if ($result) {
+        // Obtén el ID del usuario recién insertado
+$id_mascota = mysqli_insert_id($con);
+}
+    
+
     if ($res) {
         // Data inserted successfully
         ?>

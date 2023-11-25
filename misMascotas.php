@@ -50,7 +50,7 @@
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE adopcion = 1";
+            $sql = "SELECT * FROM mascota WHERE dueno = 1";
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
@@ -68,8 +68,11 @@
                                 <img src="./img/user_icon.png" style="height:30px;">'.$nombre.'</p>
                             </div>';
                             ?>
-                           <a href="detalleMascota.php"><img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
-                            <?php
+                        <form action='edicionperfilmascota.php' METHOD='POST'>";  
+                           <a href="javascript:;" onclick="parentNode.submit();" id="edicion"><input type = "hidden" id="id" name="id" value="<?php echo $id ?>"/>
+                           <img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
+                        </form>
+                           <?php
                             echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$nombre.'</p>';
                             echo '<p class="razaAnimal" style="font-size:15px; float:left; color: gray;">'.$raza.'</p>';
                             echo '<p class="EdadAnimal" style="font-size:15px; float:right;color: gray; ">'.$edad.' año(s)</p>';
