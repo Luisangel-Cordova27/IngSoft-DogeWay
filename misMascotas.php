@@ -68,7 +68,7 @@
                                 <img src="./img/user_icon.png" style="height:30px;">'.$nombre.'</p>
                             </div>';
                             ?>
-                        <form action='edicionperfilmascota.php' METHOD='POST'>";  
+                        <form action='edicionperfilmascota.php' METHOD='POST'>  
                            <a href="javascript:;" onclick="parentNode.submit();" id="edicion"><input type = "hidden" id="id" name="id" value="<?php echo $id ?>"/>
                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
                         </form>
