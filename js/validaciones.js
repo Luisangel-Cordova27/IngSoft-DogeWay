@@ -63,7 +63,7 @@ function validacionRegistro2(){
         }, 5000);
     }
     else{
-        //form.submit();
+        form.submit();
         console.log("Se envio el form");
     }
 
