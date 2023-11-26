@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/validaciones.js"></script>
     <title>Registro - Verificacion Correo</title>
 </head>
 <body>
@@ -24,10 +26,16 @@
     </div>
 
     <div class="cuadro-R">
-        <form action="" method="post">
+        <form id="emailVerif" action="" method="post">
             <h4>Código</h4>
-            <input type="text" placeholder="codigo">
-            <button type="button">Continuar</button>
+            <input type="text" id="codigo" name="codigo" placeholder="codigo">
+            <button type="button" onclick="validacionConfirmacionCorreo()">Continuar</button>
+            <div class="div-error" id="div-error" style="width: auto;">
+                <div class="error-campos" >
+                    <img src="img/error-icon.png" style="margin-right: 10px;">
+                    <p id="error-info"></p>
+                </div>
+            </div>
         </form>
     </div>
     

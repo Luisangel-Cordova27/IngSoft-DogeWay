@@ -68,3 +68,19 @@ function validacionRegistro2(){
     }
 
 }
+
+function validacionConfirmacionCorreo(){
+    let form = $("#emailVerif");
+    let codigo = $("#codigo").val();
+
+    if(!codigo){
+        $("#div-error").show();
+        $("#error-info").text('Faltan campos por llenar');
+        setTimeout(function () {
+            $("#div-error").hide();
+        }, 5000);
+    }
+    else{
+        form.submit();
+    }
+}
