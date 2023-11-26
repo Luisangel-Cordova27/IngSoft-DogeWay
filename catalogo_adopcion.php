@@ -7,6 +7,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <title>Dogeway - Adopcion </title>
+<script>
+    function redirectToPage(url){
+                window.location.href = url;
+            }
+</script>
 </head>
 <body>
     <header>
@@ -49,11 +54,12 @@
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
                 $id = $row["id_mascota"];
+                $url = "detalle_catalogo.php?id=" . $id;
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];
                 $raza = $row["raza"];                    
                 $edad = $row["Edad"];?>
-                        <div class="element">
+                        <div class="element" onclick="redirectToPage('<?php echo $url; ?>')">
                         <div class="contentbox">
                             <div class="box_user">
                             <?php
