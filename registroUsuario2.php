@@ -31,7 +31,7 @@
     </header>
 
     <main>
-        <div style="width: 80%; margin: 0 auto; padding-top: 50px;">
+        <div style="width: 80%; margin: 0 auto; padding-top: 15px;">
             <div class="titulo-R" style="padding-left: 18px;">
                 <h1 style="justify-content: left;"><span style="color: #0DCEDA;">Completa&nbsp;</span>Tu Información</h1>
                 <h2 style="justify-content: left; padding: 15px 0;">Por favor llena todos los campos para terminar tu perfil</h2>
@@ -41,7 +41,7 @@
             <input type="hidden" name="id" id = "id" value="<?php echo $id_usuario?>" readonly/>
                 <div class="contenedor-input" style="margin: 0;">
                     <div>
-                        <label for="nombre">Nombre</label>
+                        <label for="nombre">Nombre&#40;s&#41;</label>
                         <input type="text" name="nombre" id="nombre" class="input-registro">
                     </div>
 
@@ -105,12 +105,11 @@
                     </div>
                 </div>
 
-                <div class="cuadro-R" style="border: none; padding: 0; margin: 15px auto;">
+                <div class="cuadro-R" style="border: none; padding: 0; padding-top: 15px; margin: 15px auto;">
                     <button type="button" onclick="validacionRegistro2()">Registrarse</button>
                 </div>
             </form>  
-        </div>
-        
+        </div>      
     </main>
 
     <footer>

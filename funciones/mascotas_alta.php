@@ -34,8 +34,14 @@ if (move_uploaded_file($file_tmp, $destination)) {
     $sql = "INSERT INTO mascota (nombre, raza, caracteristicas, 
             color, marcas_especiales, sexo, edad, adopcion, foto, dueno) 
             VALUES('$nombre','$opciones','$descripcion', '$raza', 
-            '$condicion', '$sexo', '$fecha', '$tipo', '$fileName1', '1')";
+            '$condicion', '$sexo', '$fecha', '$tipo', '$fileName1', '2')";
     $res = $con->query($sql);
+
+    if ($result) {
+        // Obtén el ID del usuario recién insertado
+$id_mascota = mysqli_insert_id($con);
+}
+    
 
     if ($res) {
         // Data inserted successfully
