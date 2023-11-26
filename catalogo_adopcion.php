@@ -1,3 +1,10 @@
+<?php
+    session_start(); //reanudas la sesion activa :)
+    if(!isset($_SESSION['Admin'])){
+        header("Location: login.php");
+        exit();
+    }
+?>
 <!doctype html>
 <html>
 <head>
@@ -24,8 +31,10 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><a href="login.php">Iniciar sesión</a></li>
-                    <li><button class="button-Register">Registrarse</button></li>
+                    <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
+                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
                 </ul>
             </nav>
         </div>

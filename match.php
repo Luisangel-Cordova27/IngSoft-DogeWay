@@ -52,10 +52,12 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><button class="button-Register">ADOPCIÓN</button></li>
-                    <li><button class="button-Register">LISTA DE MATCHES</button></li>
-                    <li><button class="button-Register">MIS MASCOTAS</button></li>
-                    <li><a href="">Cerrar sesión</a></li>
+                <ul class="opciones-landing">
+                    <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
+                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
+                </ul>
                 </ul>
             </nav>
         </div>
@@ -78,6 +80,7 @@
             foreach($resultados as $row){
 
                 $id = $row["id_mascota"];
+                $dueno = $row["dueno"];
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];
                 $raza = $row["raza"];        
@@ -86,19 +89,20 @@
                 $sexo = $row["sexo"];
                 $descripcion = $row["caracteristicas"];
                 ?>
+            <form id="next" name="next" method="POST" action="actualizaMatch.php" >
             <div class="user">
                 <img src="img/user-icon.png" alt="" srcset="">
-                <p><?php echo $id, $foto, $nombre, $raza, $edad ?><p>
+                <p><?php echo $dueno ?><p>
                 
             </div>
             
             <img src="./img_mascotas/<?php echo $foto ?>" class="img-match">
-
+        
             <div class="contenedor-likeDismiss"> 
                 <a href="#" id="nextButton"><img src="img/Love.png" alt="" srcset=""></a>
                 <a href="#" id="nextButton"><img src="img/Dismiss.png" alt="" srcset=""></a>
            </div>
-            
+        </form> 
         </div>
 
         <div id="right-match" class="mascota-container">

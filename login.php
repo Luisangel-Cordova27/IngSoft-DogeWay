@@ -1,3 +1,11 @@
+<?php
+    session_start(); //reanudas la sesion activa :)
+    if(isset($_SESSION['Admin'])){
+        header("Location: misMascotas.php");
+        exit();
+    }
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -66,7 +74,7 @@
             ¿No tienes una cuenta?  
             <a href="registrousuario.html">Crea una</a>
         </div>
-        <a class="guest" href="catalogo_adopcion.php">Acceder como invitado</a>
+        <a class="guest" href="catalogo_adopcion_visitante.php">Acceder como invitado</a>
     </div>
 
     <img class="img-L" src="img/2GATITOS.png">

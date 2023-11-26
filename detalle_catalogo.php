@@ -1,4 +1,12 @@
 <?php
+    session_start(); //reanudas la sesion activa :)
+    if(!isset($_SESSION['Admin'])){
+        header("Location: login.php");
+        exit();
+    }
+?>
+
+<?php
 
 require "funciones/conecta.php";
 $con = conecta();
@@ -17,8 +25,6 @@ if(isset($_GET['id'])){
     $raza = $row['color'];
 
 }
-
-
 ?>
 
 <!DOCTYPE html>
