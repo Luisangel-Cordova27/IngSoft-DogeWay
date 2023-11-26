@@ -10,6 +10,7 @@
     <link href="main.css" rel="stylesheet">
     <title>Formato de quejas</title>
 </head>
+
 <body>
     <header >
         <div class="container-header">
@@ -21,18 +22,15 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">                   
-                    <li>
-                        <button class="button-Register" id="adopcionButton">ADOPCIÓN</button>
-                        <button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button>
-                        <button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button>
-                     
-                    </li>                  
-                    <li><a href="">Cerrar sesión</a></li>
+                    <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
+                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>                
                 </ul>
             </nav>
         </div>
     </header>
-    <form action="">
+    <form action="formulario_quejas.php" method="post">
         <div class="contenedor">
 
             <div class="name"></div>
@@ -65,8 +63,7 @@
             <span class="titulo">Formato de Quejas</span>
             <button type="submit" id="enviarBtn" >Enviar Formulario</button>
     
-            <div class="lineas"></div>
-            <div class="logoUbi"></div>
+           
         </div>
     </form>
 
@@ -75,6 +72,7 @@
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
         </div>
     </footer>
+
 
 </body>
 </html>

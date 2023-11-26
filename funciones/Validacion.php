@@ -5,15 +5,18 @@ $con = conecta();
 $admin = $_POST["correo"];
 $pass = $_POST["pasw"];
 
-session_start();
-            
-$_SESSION["Admin"] = $admin;
+
 //Variable Global
 $query = "SELECT * FROM usuario WHERE correo = '$admin' && contrasena = '$pass'";
 $res = $con->query($query);
 
+
 if($res && $res->num_rows > 0){
     // Redirige si hay al menos un registro
+    $row = $res->fetch_array(); 
+    $id = $row["id"];
+    session_start();         
+    $_SESSION["Admin"] = $id;
     ?>
     <script language="javascript">
         window.location.replace("../misMascotas.php");

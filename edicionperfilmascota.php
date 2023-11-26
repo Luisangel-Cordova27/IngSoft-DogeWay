@@ -1,7 +1,13 @@
 <?php
+    session_start(); //reanudas la sesion activa :)
+    if(!isset($_SESSION['Admin'])){
+        header("Location: login.php");
+        exit();
+    }
+
 require "funciones/conecta.php";
 $con = conecta();
-$id = $_POST['id'];
+$id = $_GET['id'];
 $sql = "SELECT * FROM mascota WHERE id_mascota=$id";
 $res = $con->query($sql);
 
@@ -25,7 +31,13 @@ while ($row = $res->fetch_array()) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <title>Edicion de perfil de Mascota</title>
+  <script>
+    function redirectToPage(url){
+                window.location.href = url;
+            }
+</script>
 </head>
+
 <body>
     <header >
         <div class="container-header">
@@ -37,15 +49,10 @@ while ($row = $res->fetch_array()) {
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">                   
-                    <li>
-                        <button class="button-Register" id="adopcionButton">ADOPCIÓN</button>
-                        <button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button>
-                        <button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button>
-                        <button class="boton-imagen" type="button">
-                            <img class="imagen" src="img/notificacion.png" alt="Notificaciones">
-                        </button>  
-                    </li>                  
-                    <li><a href="">Cerrar sesión</a></li>
+                    <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
+                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
                 </ul>
             </nav>
         </div>
