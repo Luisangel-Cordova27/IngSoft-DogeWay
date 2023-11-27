@@ -1,3 +1,11 @@
+<?php
+    session_start(); //reanudas la sesion activa :)
+    if(!isset($_SESSION['Admin'])){
+        header("Location: login.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,12 +60,11 @@
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
-                </ul>
                 </ul>
             </nav>
         </div>
@@ -68,12 +75,14 @@
        <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE dueno != 1 AND adopcion != 1";
-            $res = $con->query($sql);
+            $userid = $_SESSION["Admin"];
+            $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono, usuario.nickname 
+            FROM mascota INNER JOIN usuario ON usuario.id = mascota.dueno WHERE dueno != $userid AND adopcion != 1 ";
 
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
+
             while($row = $res->fetch_array()){
                 $resultados[] = $row;
             }
@@ -88,11 +97,12 @@
                 $edad = $row["Edad"];
                 $sexo = $row["sexo"];
                 $descripcion = $row["caracteristicas"];
+                $duenoname = $row["nickname"]
                 ?>
             <form id="next" name="next" method="POST" action="actualizaMatch.php" >
             <div class="user">
                 <img src="img/user-icon.png" alt="" srcset="">
-                <p><?php echo $dueno ?><p>
+                <p><?php echo $duenoname ?><p>
                 
             </div>
             
