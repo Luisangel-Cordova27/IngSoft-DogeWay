@@ -73,7 +73,7 @@
                             <p><?php echo 'Nombre: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
-                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 100px; width: 175px; align-items:right;"/>
+                            <img src="./img_mascotas/<?php echo $fotomascota ?>" style="height: 100px; width: 175px; align-items:right;"/>
                         </div>
                         <div class="contenedor-info">
                             <p><?php echo 'Teléfono: '.$telefonousuario; ?></p>

@@ -12,7 +12,7 @@
     $codigoDeVerificacion = $row['codigo_verificacion'];
 
     if($codigo_ingresado == $codigoDeVerificacion){
-        $sql = "UPDATE usuarios SET VERIFICACION='1' WHERE id='$id'";
+        $sql = "UPDATE usuario SET VERIFICACION='1' WHERE id='$id'";
         $res = $con->query($sql);
         header("Location: ../login.php");
         exit();

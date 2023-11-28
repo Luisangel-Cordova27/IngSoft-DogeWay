@@ -29,7 +29,7 @@
             <nav class="landing-nav">
             <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
-                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
+                    <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
@@ -51,7 +51,8 @@
     FROM mascota
     INNER JOIN usuario ON usuario.id = mascota.dueno
     inner JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 OR mascota.id_mascota = lista_match.mascota2)
-    WHERE lista_match.like1 = 1 AND lista_match.like2 = 1 AND mascota.dueno != $userid;";
+    WHERE lista_match.like1 = 1 AND lista_match.like2 = 1 
+    AND mascota.dueno != $userid";
     $res = $con->query($sql);
 
     while ($row = $res->fetch_array()) {
