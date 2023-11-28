@@ -45,7 +45,7 @@ if(isset($_GET['id'])){
 <header>
         <div class="container-header">
             <h1> 
-                <a href="landingPage.html">
+                <a href="index.html">
                     <img src="img/Logo.png" alt="logo">
                 </a>
             </h1>
