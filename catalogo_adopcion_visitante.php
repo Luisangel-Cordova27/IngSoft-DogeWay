@@ -49,7 +49,7 @@
             require('./funciones/conecta.php');
             $con = conecta();
             $sql = "SELECT id_mascota,foto,nombre,raza,pet.Edad,nickname FROM mascota as pet 
-                    JOIN usuario ON dueno = id WHERE adopcion=1 LIMIT 8;";
+                    JOIN usuario ON dueno = id WHERE adopcion=1;";
             $res = $con->query($sql);
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
