@@ -51,12 +51,8 @@
     while ($row = $res->fetch_array()) {
         $mascotaid = $row['id_mascota'];
         $nombremascota = $row['nombre'];  
-        $especiemascota = $row['raza'];
-        $caracteristicasmascota = $row['caracteristicas'];
         $razamascota = $row['color'];
-        $saludmascota = $row['marcas_especiales'];
         $edadmascota = $row['Edad'];
-        $sexomascota = $row['sexo'];
         $fotomascota = $row['foto'];
     ?>
 <form id="nose" name="nose" method = "post" action = "match.php">
@@ -71,14 +67,7 @@
                             <p><?php echo 'Nombre: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
-                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 100px; width: 175px; align-items:right;"/>
-                        </div>
-                        <div class="contenedor-info">
-                            <p><?php echo 'Teléfono: '.$telefonousuario; ?></p>
-                            <p><?php echo 'Especie: '.$especiemascota; ?></p>
-                            <p><?php echo 'Caracteristicas: '.$caracteristicasmascota; ?></p>
-                            <p><?php echo 'Salud: '.$saludmascota; ?></p>
-                            <p><?php echo 'Sexo: '.$sexomascota; ?></p>
+                            <img src="./img_mascotas/<?php echo $fotomascota ?>" style="height: 100px; width: 175px; align-items:right;"/>
                         </div>
                     </div>
                 </div>
