@@ -1,3 +1,12 @@
+<?php
+    session_start(); //reanudas la sesion activa :)
+    if(!isset($_SESSION['Admin'])){
+        header("Location: login.php");
+        exit();
+    }
+
+    $userid = $_SESSION["Admin"];
+?>
 <!doctype html>
 <html>
 <head>
@@ -36,8 +45,13 @@
     <?php
     require('./funciones/conecta.php');
     $con = conecta();
-    $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono 
-    FROM mascota INNER JOIN usuario ON usuario.id = mascota.dueno;";
+    $sql = "SELECT mascota.*, usuario.id, usuario.fullname, 
+    usuario.telefono, lista_match.mascota1, lista_match.mascota2, 
+    lista_match.like1, lista_match.like2
+    FROM mascota
+    INNER JOIN usuario ON usuario.id = mascota.dueno
+    inner JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 OR mascota.id_mascota = lista_match.mascota2)
+    WHERE lista_match.like1 = 1 AND lista_match.like2 = 1 AND mascota.dueno != $userid;";
     $res = $con->query($sql);
 
     while ($row = $res->fetch_array()) {
@@ -62,7 +76,8 @@
                             <p><?php echo 'Nombre Mascota: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
-                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 100px; width: 175px; align-items:right;"/>
+                            <img src="./img_mascotas/<?php echo $fotomascota?>" style="height: 100px; width: 175px; align-items:right;"/>
+                        <button type="submit"> CHAT</button>
                         </div>
                         <div class="contenedor-info">
                             <p><?php echo 'Teléfono: '.$telefonousuario; ?></p>

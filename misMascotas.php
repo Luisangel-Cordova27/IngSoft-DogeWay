@@ -66,7 +66,7 @@
             $number = 0;
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
-                $id = $row["id_mascota"];~
+                $id = $row["id_mascota"];
                 $url = "edicionperfilmascota.php?id=" .$id;
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];

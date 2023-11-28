@@ -63,6 +63,8 @@
 
 <a onclick="this.parentNode.submit();">
 <input type="hidden" id="seleccion" name="seleccion" value="<?php echo $mascotaid ?>" readonly/>
+<input type="hidden" id="especie" name="especie" value="<?php echo $especiemascota ?>" readonly/>
+<input type="hidden" id="raza" name="raza" value="<?php echo $razamascota ?>" readonly/>
 <div class="elementlista">
             <div class="contentboxlista">
                 <div class="box_user">
