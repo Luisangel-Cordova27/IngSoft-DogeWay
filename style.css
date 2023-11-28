@@ -1081,3 +1081,9 @@ section.titulocatalogo{
     transform: scale(1.1);
 
 }
+
+.box_user{
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+}

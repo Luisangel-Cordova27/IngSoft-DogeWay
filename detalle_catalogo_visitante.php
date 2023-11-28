@@ -1,12 +1,4 @@
 <?php
-    session_start(); //reanudas la sesion activa :)
-    if(!isset($_SESSION['Admin'])){
-        header("Location: login.php");
-        exit();
-    }
-?>
-
-<?php
 
 require "funciones/conecta.php";
 $con = conecta();
@@ -35,6 +27,7 @@ if(isset($_GET['id'])){
     $telDueno = $row['telefono'];
     $ubiDueno = $row['UBICACION'];
     $userDueno = $row['nickname'];
+
 }
 ?>
 
@@ -49,7 +42,7 @@ if(isset($_GET['id'])){
     <title>Detalle - Mascota</title>
 </head>
 <body>
-    <header >
+<header>
         <div class="container-header">
             <h1> 
                 <a href="landingPage.html">
@@ -59,16 +52,13 @@ if(isset($_GET['id'])){
 
             <nav class="landing-nav">
                 <ul class="opciones-landing">
-                    <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
-                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
-                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
-                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
-                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
+                    <li><a href="login.php">Iniciar sesión</a></li>
+                    <li><button class="button-Register">Registrarse</button></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <a href="catalogo_adopcion.php"><button class="button-Register" style="margin-left:30px; margin-bottom: 30px;">Regresar</button></a>
+    <a href="catalogo_adopcion_visitante.php"><button class="button-Register" style="margin-left:30px; margin-bottom: 30px;">Regresar</button></a>
     <div style="height: 700px; width: 90%; margin: 0 auto; display: flex; gap: 2%;">
         <div id="left-match">
             <div class="user">
