@@ -33,7 +33,7 @@
             <nav class="landing-nav" >
                 <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
-                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
+                    <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
@@ -66,7 +66,7 @@
             $number = 0;
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
-                $id = $row["id_mascota"];~
+                $id = $row["id_mascota"];
                 $url = "edicionperfilmascota.php?id=" .$id;
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];

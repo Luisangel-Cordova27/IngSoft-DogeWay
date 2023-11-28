@@ -63,6 +63,8 @@
 
 <a onclick="this.parentNode.submit();">
 <input type="hidden" id="seleccion" name="seleccion" value="<?php echo $mascotaid ?>" readonly/>
+<input type="hidden" id="especie" name="especie" value="<?php echo $especiemascota ?>" readonly/>
+<input type="hidden" id="raza" name="raza" value="<?php echo $razamascota ?>" readonly/>
 <div class="elementlista">
             <div class="contentboxlista">
                 <div class="box_user">
@@ -71,7 +73,7 @@
                             <p><?php echo 'Nombre: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
-                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 100px; width: 175px; align-items:right;"/>
+                            <img src="./img_mascotas/<?php echo $fotomascota ?>" style="height: 100px; width: 175px; align-items:right;"/>
                         </div>
                         <div class="contenedor-info">
                             <p><?php echo 'Teléfono: '.$telefonousuario; ?></p>

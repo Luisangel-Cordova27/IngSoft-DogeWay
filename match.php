@@ -4,7 +4,39 @@
         header("Location: login.php");
         exit();
     }
+
+    $userid = $_SESSION["Admin"];
+
+    require('./funciones/conecta.php');
+    $con = conecta();
+    $ownpetid = $_POST["seleccion"];
+    $ownpettipo = $_POST["especie"];
+    $ownpetraza = $_POST["raza"];
+
+    $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono, usuario.nickname, 
+    lista_match.mascota1, lista_match.mascota2, lista_match.like1, lista_match.like2
+    FROM mascota 
+    INNER JOIN usuario ON usuario.id = mascota.dueno 
+    LEFT JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 OR mascota.id_mascota = lista_match.mascota2)
+    WHERE dueno != $ownpetid AND adopcion = 0 AND raza = '$ownpettipo' AND color = '$ownpetraza' 
+    AND (lista_match.like1 IS NULL AND lista_match.like2 IS NULL) ORDER BY RAND()";
+
+    $res = $con->query($sql);
+
+   while ($row = $res->fetch_array()) {
+        $id = $row["id_mascota"];
+        $dueno = $row["dueno"];
+        $foto = $row["foto"];
+        $nombre = $row["nombre"];
+        $raza = $row["raza"];
+        $color = $row["color"];
+        $edad = $row["Edad"];
+        $sexo = $row["sexo"];
+        $descripcion = $row["caracteristicas"];
+        $duenoname = $row["nickname"];
+       }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,38 +48,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <title>DogeWay - Match</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Inicializar el índice actual
-            var currentIndex = 0;
+<script>
+        function cargarSiguienteRegistro(){
+            $.ajax({
+                url: "actualiza_match.php",
+                type: "POST",
+                dataType: "text",
+                data: id1:<?php echo $userid?>
+                success:
+            })
+        }
 
-            // Obtener todos los resultados en un array
-            var mascotas = <?php echo json_encode($resultados); ?>;
-
-            // Ocultar todas las mascotas excepto la primera
-            $(".mascota-container").hide();
-            $(".mascota-container").eq(currentIndex).show();
-
-            // Manejar clic en el botón para mostrar el siguiente resultado
-            $("a.nextButton").click(function () {
-                // Ocultar el resultado actual
-                $(".mascota-container").eq(currentIndex).hide();
-
-                // Incrementar el índice
-                currentIndex++;
-
-                // Verificar si hemos alcanzado el final de los resultados
-                if (currentIndex >= mascotas.length) {
-                    currentIndex = 0; // Volver al primer resultado si estamos al final
-                }
-
-                // Mostrar el siguiente resultado
-                $(".mascota-container").eq(currentIndex).show();
-            });
-        });
-    </script>
-
-
+</script>
 </head>
 <body>
     <header >
@@ -71,35 +83,9 @@
     </header>
 
     <div style="height: 700px; width: 90%; margin: 0 auto; display: flex; gap: 2%;">
-    <div id="left-match" class="mascota-container">
-       <?php
-            require('./funciones/conecta.php');
-            $con = conecta();
-            $userid = $_SESSION["Admin"];
-            $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono, usuario.nickname 
-            FROM mascota INNER JOIN usuario ON usuario.id = mascota.dueno WHERE dueno != $userid AND adopcion != 1 ";
-
-            $res = $con->query($sql);
-            $number = 0;
-            ///Muestra los elementos dentro de la tabla
-
-            while($row = $res->fetch_array()){
-                $resultados[] = $row;
-            }
-            foreach($resultados as $row){
-
-                $id = $row["id_mascota"];
-                $dueno = $row["dueno"];
-                $foto = $row["foto"];
-                $nombre = $row["nombre"];
-                $raza = $row["raza"];        
-                $color = $row["color"];            
-                $edad = $row["Edad"];
-                $sexo = $row["sexo"];
-                $descripcion = $row["caracteristicas"];
-                $duenoname = $row["nickname"]
-                ?>
+        <div id="left-match" class="mascota-container">
             <form id="next" name="next" method="POST" action="actualizaMatch.php" >
+        
             <div class="user">
                 <img src="img/user-icon.png" alt="" srcset="">
                 <p><?php echo $duenoname ?><p>
@@ -109,10 +95,20 @@
             <img src="./img_mascotas/<?php echo $foto ?>" class="img-match">
         
             <div class="contenedor-likeDismiss"> 
-                <a href="#" id="nextButton"><img src="img/Love.png" alt="" srcset=""></a>
-                <a href="#" id="nextButton"><img src="img/Dismiss.png" alt="" srcset=""></a>
+            <form id="match" name="match" method="POST" action="./funciones/actualizaMatch.php">
+                <input type="hidden" name="mascota1" id="mascota1" value="<?php echo $ownpetid ;?>" readonly> 
+                <input type="hidden" name="mascota2" id="mascota2" value="<?php echo $id ?>" readonly>
+                <input type="hidden" name="like" id="like" value="1" readonly> 
+                <a onclick="parentNode.submit();" id="nexttButton" ><img src="img/Love.png" alt="" srcset="" ></a>
+            </form>
+            <form id="match2" name="match2" method="POST" action="./funciones/actualizaMatch.php">
+                <input type="hidden" name="mascota1" id="mascota1" value="<?php echo $ownpetid ;?>" readonly> 
+                <input type="hidden" name="mascota2" id="mascota2" value="<?php echo $id ?>" readonly>
+                <input type="hidden" name="like" id="like" value="0" readonly> 
+                <a onclick="parentNode.submit();" id="nextButton"><img src="img/Dismiss.png" alt="" srcset=""></a>
+            </form>   
            </div>
-        </form> 
+        
         </div>
 
         <div id="right-match" class="mascota-container">
@@ -126,12 +122,7 @@
             </div>
         </div>
     </div>
-        <?php
-        }
-        ?>
-        
-    </div>
-
+    </form> 
     <footer>
         <div class="footer_element_mascotas">
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
