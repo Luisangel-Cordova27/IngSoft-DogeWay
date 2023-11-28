@@ -26,13 +26,14 @@
         <div class="container-header">
             <h1> 
                 <a href="landingPage.html">
-                    <img src="img/Logo.png" alt="logo">
+                    <img src="img/Logo.png" alt="logo" >
                 </a>
             </h1>
 
-            <nav class="landing-nav">
+            <nav class="landing-nav" >
                 <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
@@ -50,7 +51,7 @@
             <u><h1>   Mascotas</h1></u>
             </div>
             <br>
-            <h2>Haz click en la foto de la mascota para ver más detalles c: </h2>
+            <h2>Haz click en la tarjeta de la mascota para ver más detalles y editarlos :) </h2>
         </div>
         <center><button class="button-Register" type="button" onclick="redirectToPage('./registromascotas.html')">AGREGAR MASCOTA</button></center>
     </section>
@@ -59,12 +60,13 @@
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE dueno = 1";
+            $userid = $_SESSION["Admin"]; 
+            $sql = "SELECT * FROM mascota WHERE dueno = $userid";
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
-                $id = $row["id_mascota"];
+                $id = $row["id_mascota"];~
                 $url = "edicionperfilmascota.php?id=" .$id;
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];
@@ -73,11 +75,7 @@
                         <div class="element" onclick="redirectToPage('<?php echo $url; ?>')">
                         <div class="contentbox">
                             <div class="box_user">
-                            <?php
-                                echo '<p class="etiquetaUser" style="font-size:15px;">
-                                <img src="./img/user_icon.png" style="height:30px;">'.$nombre.'</p>
-                            </div>';
-                            ?>
+                                <br>
                         <form action='edicionperfilmascota.php' METHOD='POST'>  
                            <a href="javascript:;" onclick="parentNode.submit();" id="edicion"><input type = "hidden" id="id" name="id" value="<?php echo $id ?>"/>
                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>

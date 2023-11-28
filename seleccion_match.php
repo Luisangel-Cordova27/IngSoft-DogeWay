@@ -1,3 +1,10 @@
+<?php
+    session_start(); //reanudas la sesion activa :)
+    if(!isset($_SESSION['Admin'])){
+        header("Location: login.php");
+        exit();
+    }
+?>
 <!doctype html>
 <html>
 <head>
@@ -30,17 +37,19 @@
     </header>
 
     <div class="titulo-RM">
-        <h1><span style="color: #0DCEDA;">Lista&nbsp;</span>De matches</h1>
+        <h1>Seleccion<span style="color: #0DCEDA;">&nbsp;para Cruza de Mascota</span></h1>
+        <h2>Haz click en los datos de tu mascota para empezar a hacer match :) </h2>
     </div>
 
     <?php
     require('./funciones/conecta.php');
     $con = conecta();
-    $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono 
-    FROM mascota INNER JOIN usuario ON usuario.id = mascota.dueno;";
+    $userid = $_SESSION["Admin"]; 
+    $sql = "SELECT * FROM mascota WHERE dueno = $userid";
     $res = $con->query($sql);
 
     while ($row = $res->fetch_array()) {
+        $mascotaid = $row['id_mascota'];
         $nombremascota = $row['nombre'];  
         $especiemascota = $row['raza'];
         $caracteristicasmascota = $row['caracteristicas'];
@@ -49,17 +58,17 @@
         $edadmascota = $row['Edad'];
         $sexomascota = $row['sexo'];
         $fotomascota = $row['foto'];
-        $fullnameusuario = $row['fullname'];  
-        $telefonousuario = $row['telefono'];  
     ?>
+<form id="nose" name="nose" method = "post" action = "match.php">
 
+<a onclick="this.parentNode.submit();">
+<input type="hidden" id="seleccion" name="seleccion" value="<?php echo $mascotaid ?>" readonly/>
 <div class="elementlista">
             <div class="contentboxlista">
                 <div class="box_user">
                     <div class="menu-desplegable">
                         <div class="button-lista">
-                            <?php echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$fullnameusuario.'</p>'; ?>
-                            <p><?php echo 'Nombre Mascota: '.$nombremascota; ?> </p>
+                            <p><?php echo 'Nombre: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
                             <img src="./img_mascotas/<?php echo $foto ?>" style="height: 100px; width: 175px; align-items:right;"/>
@@ -75,18 +84,11 @@
                 </div>
             </div>
         </div>
+    </a>
+        </form>
             <?php
             }        
-            ?>              
-
-    <script>
-        document.querySelectorAll('.button-lista').forEach(function(boton) {
-            boton.addEventListener('click', function() {
-                var contenedorInfo = this.parentElement.querySelector('.contenedor-info');
-                contenedorInfo.style.display = (contenedorInfo.style.display === 'block') ? 'none' : 'block';
-            });
-        });
-    </script>
+            ?>             
 
     <footer>
         <div class="footer_element_mascotas">

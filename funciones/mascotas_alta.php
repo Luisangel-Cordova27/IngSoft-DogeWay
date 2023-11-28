@@ -1,7 +1,9 @@
 <?php
-
 // Include the connection file (conecta.php)
 require "conecta.php";
+session_start();
+
+ $userid = $_SESSION["Admin"]; 
 
 echo var_dump($_FILES);
 // Get file details
@@ -34,7 +36,7 @@ if (move_uploaded_file($file_tmp, $destination)) {
     $sql = "INSERT INTO mascota (nombre, raza, caracteristicas, 
             color, marcas_especiales, sexo, edad, adopcion, foto, dueno) 
             VALUES('$nombre','$opciones','$descripcion', '$raza', 
-            '$condicion', '$sexo', '$fecha', '$tipo', '$fileName1', '2')";
+            '$condicion', '$sexo', '$fecha', '$tipo', '$fileName1', '$userid')";
     $res = $con->query($sql);
 
     if ($result) {

@@ -6,8 +6,8 @@ body{
 
 /* Landing page*/
 .container-header{
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,18 +15,23 @@ body{
 
 .container-header h1{
     display: inline;
+    margin-right:10px;
+    margin-left: 40px;
+    
 }
 
 .landing-nav{
     display: inline;
+    margin-left:-25px;
 }
 
 .opciones-landing{
-    display: inline;
+    display: inline;  
+
 }
 .opciones-landing li{
     display: inline;
-    margin: 0 0 0 15px;
+    margin-left:5px;
 }
 
 .landing-nav a{
@@ -1021,4 +1026,58 @@ section.titulocatalogo{
     align-items: center;
     text-align: center;
     display: flex;
+}
+
+/*lista_match*/
+
+.elementlista {
+    width: 90%; 
+    margin-bottom: 20px;
+    margin-left: 35px;
+    border-radius: 20px; 
+    border: 1px solid #ccc;
+    padding: 25px;    
+}
+
+.menu-desplegable {
+  
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.contenedor-info {
+    width: 100%; 
+    display: none;
+    position: absolute;
+    top: 100%;
+    border-left: 20px;
+    border-radius: 10px;
+    background-color: #b7e6f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.button-lista{
+    padding: 10px 53px;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #69d2f1;
+    color: #FFFFFF;
+    border: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.button-lista img {
+    margin-left: 20px; 
+}
+
+.button-lista:hover{
+    transform: scale(1.1);
+
 }

@@ -32,6 +32,7 @@
             <nav class="landing-nav">
                 <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
@@ -57,7 +58,9 @@
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $sql = "SELECT * FROM mascota WHERE adopcion = 1 LIMIT 8";
+            $userid = $_SESSION["Admin"];
+            $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono, usuario.nickname 
+            FROM mascota INNER JOIN usuario ON usuario.id = mascota.dueno WHERE dueno != $userid AND adopcion = 1";
             $res = $con->query($sql);
             $number = 0;
             ///Muestra los elementos dentro de la tabla
@@ -67,13 +70,15 @@
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];
                 $raza = $row["raza"];                    
-                $edad = $row["Edad"];?>
+                $edad = $row["Edad"];
+                $nombredueno = $row["fullname"];
+                ?>
                         <div class="element" onclick="redirectToPage('<?php echo $url; ?>')">
                         <div class="contentbox">
                             <div class="box_user">
                             <?php
                                 echo '<p class="etiquetaUser" style="font-size:15px;">
-                                <img src="./img/user_icon.png" style="height:30px;">'.$nombre.'</p>
+                                <img src="./img/user_icon.png" style="height:30px;">'.$nombredueno.'</p>
                             </div>';
                             ?>
                            <a href="detalleMascota.php"><img src="./img/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
