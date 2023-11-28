@@ -1,3 +1,8 @@
+<?php
+    if(isset($_GET['id'])){
+        $id_usuario = $_GET['id'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +31,8 @@
     </div>
 
     <div class="cuadro-R">
-        <form id="emailVerif" action="" method="post">
+        <form id="emailVerif" action="funciones/validacion_codigo.php" method="post">
+            <input type="hidden" name="id" id = "id" value="<?php echo $id_usuario?>" readonly/>
             <h4>Código</h4>
             <input type="text" id="codigo" name="codigo" placeholder="codigo">
             <button type="button" onclick="validacionConfirmacionCorreo()">Continuar</button>
@@ -35,6 +41,12 @@
                     <img src="img/error-icon.png" style="margin-right: 10px;">
                     <p id="error-info"></p>
                 </div>
+                <?php if (isset($_GET['error']) && $_GET['error'] == 'codigo') : ?>
+                    <div class="error-campos" style="display:block;">
+                        <img src="img/error-icon.png" style="margin-right: 10px;">
+                        <p id="error-info">Código Incorrecto</p>
+                    </div>
+                <?php endif; ?>
             </div>
         </form>
     </div>
