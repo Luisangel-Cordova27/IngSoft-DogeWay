@@ -9,7 +9,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1.2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     <header>
         <div class="container-header">
             <h1> 
-                <a href="landingPage.html">
+                <a href="index.html">
                     <img src="img/Logo.png" alt="logo">
                 </a>
             </h1>
@@ -52,36 +52,34 @@
         </div>
         <br><br>  
     </section><br>
-    <center><h2>Haz click en la foto de la mascota para ver más detalles c: </h2><center>
+    <center><h2>Haz click en la carta de la mascota para ver más detalles c: </h2><center>
     <section class="catalogo" id="adopcion">
 
             <?php
             require('./funciones/conecta.php');
             $con = conecta();
-            $userid = $_SESSION["Admin"];
-            $sql = "SELECT mascota.*, usuario.id, usuario.fullname, usuario.telefono, usuario.nickname 
-            FROM mascota INNER JOIN usuario ON usuario.id = mascota.dueno WHERE dueno != $userid AND adopcion = 1";
+            $sql = "SELECT id_mascota,foto,nombre,raza,pet.Edad,nickname FROM mascota as pet 
+                    JOIN usuario ON dueno = id WHERE adopcion=1;";
             $res = $con->query($sql);
-            $number = 0;
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
                 $id = $row["id_mascota"];
                 $url = "detalle_catalogo.php?id=" . $id;
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];
+                $user = $row['nickname'];
                 $raza = $row["raza"];                    
                 $edad = $row["Edad"];
-                $nombredueno = $row["fullname"];
                 ?>
                         <div class="element" onclick="redirectToPage('<?php echo $url; ?>')">
                         <div class="contentbox">
                             <div class="box_user">
                             <?php
-                                echo '<p class="etiquetaUser" style="font-size:15px;">
-                                <img src="./img/user_icon.png" style="height:30px;">'.$nombredueno.'</p>
+                                echo '<img src="./img/user_icon.png" style="height:30px;"><p style="font-size:15px;">
+                                '.$user.'</p>
                             </div>';
                             ?>
-                           <a href="detalleMascota.php"><img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
+                           <img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/>
                             <?php
                             echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$nombre.'</p>';
                             echo '<p class="razaAnimal" style="font-size:15px; float:left; color: gray;">'.$raza.'</p>';
