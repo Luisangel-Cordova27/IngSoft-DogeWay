@@ -82,6 +82,10 @@
         </div>
     </header>
 
+<!--HAZ UN IF-->
+
+<?php if ($res && $res->num_rows > 0):?>
+
     <div style="height: 700px; width: 90%; margin: 0 auto; display: flex; gap: 2%;">
         <div id="left-match" class="mascota-container">
             <form id="next" name="next" method="POST" action="actualizaMatch.php" >
@@ -122,7 +126,14 @@
             </div>
         </div>
     </div>
-    </form> 
+    </form>
+    <?php
+    else : ?>
+
+
+    <?php endif;?>
+
+<!--CIERRA IF -->
     <footer>
         <div class="footer_element_mascotas">
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>

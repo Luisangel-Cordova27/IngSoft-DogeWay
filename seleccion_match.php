@@ -67,7 +67,7 @@
 <input type="hidden" id="raza" name="raza" value="<?php echo $razamascota ?>" readonly/>
 <div class="elementlista">
             <div class="contentboxlista">
-                <div class="box_user">
+                <div class="box_user1">
                     <div class="menu-desplegable">
                         <div class="button-lista">
                             <p><?php echo 'Nombre: '.$nombremascota; ?> </p>

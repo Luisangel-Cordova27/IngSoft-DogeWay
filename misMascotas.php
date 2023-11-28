@@ -74,7 +74,7 @@
                 $edad = $row["Edad"];?>
                         <div class="element" onclick="redirectToPage('<?php echo $url; ?>')">
                         <div class="contentbox">
-                            <div class="box_user">
+                            <div class="box_user1">
                                 <br>
                         <form action='edicionperfilmascota.php' METHOD='POST'>  
                            <a href="javascript:;" onclick="parentNode.submit();" id="edicion"><input type = "hidden" id="id" name="id" value="<?php echo $id ?>"/>
