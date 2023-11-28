@@ -20,6 +20,7 @@ while ($row = $res->fetch_array()) {
     $color = $row['color'];
     $condicion = $row['marcas_especiales'];
     $tipo = $row['adopcion'];
+    $foto = $row['foto'];
 }
 ?>
 <!doctype html>
@@ -50,7 +51,7 @@ while ($row = $res->fetch_array()) {
             <nav class="landing-nav">
                 <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
-                    <li><a href="match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
+                    <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
@@ -62,15 +63,15 @@ while ($row = $res->fetch_array()) {
     <div class="titulo-RM">
         <h1><span style="color: #0DCEDA;">Editar&nbsp;</span>Mascota</h1>
     </div>
-<form name="edicionperfilmascota" id="edicionperfilmascota" method="post" action="./funciones/mascotas_altaeditar.php">
+<form name="edicionperfilmascota" id="edicionperfilmascota" method="post" action="./funciones/mascotas_altaeditar.php" enctype="multipart/form-data">
     <input type="hidden" id="id" name="id" value = "<?php echo $id?>" readonly>
     <div class="cuadro-RM">
         <div class="columna">
             <div class="cuadro-fotoEPM">
                 <label for="imagen" class="boton-imagenEPM">
-                    <img src="img/dog.jpg" alt="Subir foto">
+                    <img src="./img_mascotas/<?php echo $foto?>" alt="Subir foto">
                 </label>
-                <input type="file" id="imagen" name="imagen" accept="image/*">
+                <input type="file" id="archivo" name="archivo" required>
             </div>
             <h4>Cartilla de vacunación</h4>
             <input type="file" id="cartilla" name="cartilla">
