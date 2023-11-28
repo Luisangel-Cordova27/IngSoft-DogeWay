@@ -71,8 +71,8 @@ while ($row = $res->fetch_array()) {
                 <label for="imagen" class="boton-imagenEPM">
                     <img src="./img_mascotas/<?php echo $foto?>" alt="Subir foto">
                 </label>
-                <input type="file" id="archivo" name="archivo" required>
             </div>
+          <input type="file" id="archivo" name="archivo">
             <h4>Cartilla de vacunación</h4>
             <input type="file" id="cartilla" name="cartilla">
         </div>
