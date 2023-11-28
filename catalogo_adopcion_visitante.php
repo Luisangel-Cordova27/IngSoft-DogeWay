@@ -68,7 +68,7 @@
                                 '.$user.'</p>
                             </div>';
                             ?>
-                           <a href="detalleMascota.php"><img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
+                            <img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;">
                             <?php
                             echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$nombre.'</p>';
                             echo '<p class="razaAnimal" style="font-size:15px; float:left; color: gray;">'.$raza.'</p>';
