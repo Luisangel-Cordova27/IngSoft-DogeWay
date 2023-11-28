@@ -21,5 +21,5 @@ $sql = "UPDATE usuario SET fullname = '$fullname', edad = '$fecha_nacimiento', t
 
 $res = $con->query($sql);
 
-header("Location: misMascotas.php");
+header("Location: funciones/enviar_email.php?id=".$id_usuario);
 ?>

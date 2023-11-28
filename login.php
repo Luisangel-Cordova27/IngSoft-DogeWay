@@ -66,7 +66,7 @@
             <input type="email" id="correo" name="correo" placeholder="Escribe tu correo..." required>
             <h4>Contraseña</h4>
             <input type="password" name="pasw" id="pasw" placeholder="Escribe tu contraseña..." required>
-            <div class="checkCampos" id="checkCampos">...</div>
+            <div class="checkCampos" id="checkCampos"></div>
             <a class="forgot-pass">¿Olvidaste tu contraseña?</a>
             <button type="submit" class="boton">Acceder</button>
     <form>
