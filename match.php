@@ -129,7 +129,9 @@
     </form>
     <?php
     else : ?>
-
+        <br>
+        <a href="seleccion_match.php"><button class="button-Register" style="margin-left:30px;">Regresar</button></a>
+        <img src="./img/imagen-noHayMascotasCruza.png" width="100%" style="padding-top: 10px">
 
     <?php endif;?>
 

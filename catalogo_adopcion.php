@@ -4,6 +4,8 @@
         header("Location: login.php");
         exit();
     }
+
+    $userid = $_SESSION['Admin'];
 ?>
 <!doctype html>
 <html>
@@ -52,6 +54,7 @@
         </div>
         <br><br>  
     </section><br>
+    <?php if ($res && $res->num_rows > 0):?>
     <center><h2>Haz click en la carta de la mascota para ver más detalles c: </h2><center>
     <section class="catalogo" id="adopcion">
 
@@ -59,7 +62,7 @@
             require('./funciones/conecta.php');
             $con = conecta();
             $sql = "SELECT id_mascota,foto,nombre,raza,pet.Edad,nickname FROM mascota as pet 
-                    JOIN usuario ON dueno = id WHERE adopcion=1;";
+                    JOIN usuario ON dueno = id WHERE adopcion=1 AND dueno != $userid;";
             $res = $con->query($sql);
             ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {

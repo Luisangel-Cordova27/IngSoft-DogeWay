@@ -50,7 +50,8 @@
     lista_match.like1, lista_match.like2
     FROM mascota
     INNER JOIN usuario ON usuario.id = mascota.dueno
-    inner JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 OR mascota.id_mascota = lista_match.mascota2)
+    inner JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 
+    OR mascota.id_mascota = lista_match.mascota2)
     WHERE lista_match.like1 = 1 AND lista_match.like2 = 1 
     AND mascota.dueno != $userid";
     $res = $con->query($sql);
@@ -70,7 +71,7 @@
 
 <div class="elementlista">
             <div class="contentboxlista">
-                <div class="box_user">
+                <div class="box_user1">
                     <div class="menu-desplegable">
                         <div class="button-lista">
                             <?php echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$fullnameusuario.'</p>'; ?>
