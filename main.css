@@ -1,510 +1,358 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+.container-header{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+s
+.container-header h1{
+  display: inline;
+}
+
+.landing-nav{
+  display: inline;
+}
+
+.opciones-landing{
+  display: inline;
+}
+.opciones-landing li{
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+.landing-nav a{
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.landing-nav a:visited{
+  color: black;
+}
+
+.landing-nav a:hover{
+  text-decoration: underline;
+}
+
+.button-Register{
+  padding: 10px 53px;
+  border-radius: 68px;
+  font-size: 16px;
+  background-color: #0DCEDA;
+  color: #FFFFFF;
+  border: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.button-Register:hover{
+  transform: scale(1.1);
+
+}
+
+footer{
+  margin-top: 157px;
+  margin-bottom: -30px;
+}
+
+.footer_element{
+  background-color: #249ca4;
+  color: rgb(255, 255, 255);
+  padding-left: 10px;
+  padding-top: 10px;
+  align-items: center;
+  font-size: small;
+}
+
+.contenedor {
+  width: 100%;
+  height: 960px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.contenedor_formulario {
+  width: 90%;
+  height: 665px;
+  background: linear-gradient(rgba(47,165,181,0.7200000286102295), rgba(47,165,181,0.28999999165534973));
+  opacity: 1;
+  position: absolute;
+  top: 175px;
+  left: 140px;
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+  border-bottom-left-radius: 39px;
+  border-bottom-right-radius: 39px;
+  overflow: hidden;
+}
+
+.fecha_incidente {
+  width: 266px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 234px;
+  left: 280px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.usuario_report {
+  width: 248px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 234px;
+  left: 791px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.nom_usuario {
+  width: 273px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 401px;
+  left: 782px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.ubi_incidentes {
+  width: 318px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 401px;
+  left: 273px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.details {
+  width: 293px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 560px;
+  left: 265px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.titulo {
+  width: 371px;
+  position: absolute;
+  top: 103px;
+  left: 800px;
+  font-family: Playfair Display;
+  font-weight: Bold;
+  font-size: 40px;
+  opacity: 1;
+  text-align: center;
+}
+
+.campoIncidente {
+  width: 295px;
+  height: 46px;
+  background: rgba(255,255,255,0.8299999833106995);
+  opacity: 1;
+  position: absolute;
+  top: 290px;
+  left: 265px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+.nombreUsuario {
+  width: 295px;
+  height: 46px;
+  background: rgba(255,255,255,0.8299999833106995);
+  opacity: 1;
+  position: absolute;
+  top: 457px;
+  left: 782px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+
+
+.campoUbi {
+  width: 295px;
+  height: 46px;
+  background: rgba(255,255,255,0.8299999833106995);
+  opacity: 1;
+  position: absolute;
+  top: 457px;
+  left: 265px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+
+.usuarioReportado {
+  width: 295px;
+  height: 46px;
+  background: rgba(255,255,255,0.8299999833106995);
+  opacity: 1;
+  position: absolute;
+  top: 290px;
+  left: 782px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+
+.campoDetalles {
+  width: 295px;
+  height: 168px;
+  background: rgba(255,255,255,0.8299999833106995);
+  opacity: 1;
+  position: absolute;
+  top: 616px;
+  left: 263px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+
+#fechaIncidente {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#ubicacionIncidente {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 0px solid #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#detallesIncidente {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 0px solid #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#usuarioReport {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 0px solid #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+#nombreUsuario {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 0px solid #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+#enviarBtn {
+  width: 229px;
+  height: 46px;
+  background: rgba(102,112,133,1);
+  color: #fff;
+  opacity: 1;
+  position: absolute;
+  top: 713px;
+  left: 866px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+
+#enviarBtn:hover {
+  background-color: rgba(10,146,155,1); 
+}
+
+#adopcionBtn,
+#matchesBtn,
+#mascotasBtn {
+  padding: 10px 53px;
+  border-radius: 68px;
+  font-size: 16px;
+  background-color: #0DCEDA;
+  color: #FFFFFF;
+  border: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#adopcionBtn:hover{
+  background-color: rgba(102,112,133,1); 
+}
+
+#matchesBtn:hover{
+  background-color: rgba(102,112,133,1); 
+}
+
+#mascotasBtn:hover{
+  background-color: rgba(102,112,133,1); 
+}
+
+.contenedor {
+  text-align: center;
+  line-height: 2; 
   
-  body {
-    font-size: 14px;
-  }
-  
-  .container-header{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  s
-  .container-header h1{
-    display: inline;
-  }
-  
-  .landing-nav{
-    display: inline;
-  }
-  
-  .opciones-landing{
-    display: inline;
-  }
-  .opciones-landing li{
-    display: inline;
-    margin: 0 0 0 15px;
-  }
-  
-  .landing-nav a{
-    font-size: 16px;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .landing-nav a:visited{
-    color: black;
-  }
-  
-  .landing-nav a:hover{
-    text-decoration: underline;
-  }
-  
-  .button-Register{
-    padding: 10px 53px;
-    border-radius: 68px;
-    font-size: 16px;
-    background-color: #0DCEDA;
-    color: #FFFFFF;
-    border: none;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .button-Register:hover{
-    transform: scale(1.1);
-  
-  }
-  
-  footer{
-    margin-top: 157px;
-    margin-bottom: -30px;
-  }
-  
-  .footer_element{
-    background-color: #249ca4;
-    color: rgb(255, 255, 255);
-    padding-left: 10px;
-    padding-top: 10px;
-    align-items: center;
-    font-size: small;
-  }
-  
-  .contenedor {
-    width: 100%;
-    height: 960px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
-  
-  .header {
-    width: 100%;
-    height: 58px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 26px;
-    left: 120px;
-    overflow: hidden;
-  }
-  
-  .logout {
-    width: 96px;
-    color: rgba(30,30,30,1);
-    position: absolute;
-    top: 20px;
-    left: 1500px;
-    font-family: Roboto;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: right;
-  }
-  
-  .logo {
-    width: 212px;
-    height: 58px;
-    background: url("img/Logo.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
-  
-  .pie {
-    width: 100%;
-    height: 70px;
-    background: rgba(10,146,155,1);
-    opacity: 1;
-    position: absolute;
-    top: 890px;
-    left: 0px;
-    overflow: hidden;
-  }
-  
-  .derechos {
-    width: 248px;
-    color: rgba(251,251,251,1);
-    position: absolute;
-    top: 26px;
-    left: 112px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 14px;
-    opacity: 1;
-    text-align: left;
-  }
-  
-  .twitter{
-    width: 41px;
-    height: 38px;
-    background: url(img/twitter.png);
-    opacity: 1;
-    position: absolute;
-    top: 16px;
-    left: 1360px;
-  }
-  
-  
-  .linkedin {
-    width: 38px;
-    height: 38px;
-    background: url(img/entypo-social_linkedin-with-circle.png);
-    opacity: 1;
-    position: absolute;
-    top: 16px;
-    left: 1298px;
-  }
-  
-  .fb {
-    width: 38px;
-    height: 38px;
-    background: url(img/entypo-social_twitter-with-circle.png);
-    opacity: 1;
-    position: absolute;
-    top: 16px;
-    left: 1225px;
-  }
-  
-  
-  .logoNoti {
-    width: 40px;
-    height: 40px;
-    background: url("img/notificacion.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 36px;
-    left: 1500px;
-    overflow: hidden;
-  }
-  .contenedor_formulario {
-    width: 90%;
-    height: 665px;
-    background: linear-gradient(rgba(47,165,181,0.7200000286102295), rgba(47,165,181,0.28999999165534973));
-    opacity: 1;
-    position: absolute;
-    top: 175px;
-    left: 140px;
-    border-top-left-radius: 39px;
-    border-top-right-radius: 39px;
-    border-bottom-left-radius: 39px;
-    border-bottom-right-radius: 39px;
-    overflow: hidden;
-  }
-  .fecha_incidente {
-    width: 266px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 234px;
-    left: 280px;
-    font-family: Roboto;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  
-  .usuario_report {
-    width: 248px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 234px;
-    left: 791px;
-    font-family: Roboto;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .nom_usuario {
-    width: 273px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 401px;
-    left: 782px;
-    font-family: Roboto;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .ubi_incidentes {
-    width: 318px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 401px;
-    left: 273px;
-    font-family: Roboto;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .details {
-    width: 293px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 560px;
-    left: 265px;
-    font-family: Roboto;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  
-  .titulo {
-    width: 371px;
-    position: absolute;
-    top: 103px;
-    left: 800px;
-    font-family: Playfair Display;
-    font-weight: Bold;
-    font-size: 40px;
-    opacity: 1;
-    text-align: center;
-  }
-  
-  .campoIncidente {
-    width: 295px;
-    height: 46px;
-    background: rgba(255,255,255,0.8299999833106995);
-    opacity: 1;
-    position: absolute;
-    top: 290px;
-    left: 265px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  .nombreUsuario {
-    width: 229px;
-    height: 46px;
-    background: rgba(255,255,255,0.8299999833106995);
-    opacity: 1;
-    position: absolute;
-    top: 457px;
-    left: 782px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  
-  .apellidoUsuario {
-    width: 229px;
-    height: 46px;
-    background: rgba(255,255,255,0.8299999833106995);
-    opacity: 1;
-    position: absolute;
-    top: 457px;
-    left: 1021px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  .campoUbi {
-    width: 295px;
-    height: 46px;
-    background: rgba(255,255,255,0.8299999833106995);
-    opacity: 1;
-    position: absolute;
-    top: 457px;
-    left: 265px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  .usuarioReportado {
-    width: 295px;
-    height: 46px;
-    background: rgba(255,255,255,0.8299999833106995);
-    opacity: 1;
-    position: absolute;
-    top: 290px;
-    left: 782px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  .campoDetalles {
-    width: 295px;
-    height: 168px;
-    background: rgba(255,255,255,0.8299999833106995);
-    opacity: 1;
-    position: absolute;
-    top: 616px;
-    left: 263px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  
-  .logoUbi {
-    width: 32px;
-    height: 37px;
-    background: url("img/ubicacion.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 462px;
-    left: 285px;
-    overflow: hidden;
-  }
-  .lineas {
-    width: 22px;
-    height: 31px;
-    background: url("img/lineas.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 627px;
-    left: 290px;
-    overflow: hidden;
-  }
-  
-  #fechaIncidente {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  #ubicacionIncidente {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 0px solid #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  #detallesIncidente {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 0px solid #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  #usuarioReport {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 0px solid #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  
-  #nombreUsuario {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 0px solid #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  #apellidoUsuario {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 0px solid #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  #enviarBtn {
-    width: 229px;
-    height: 46px;
-    background: rgba(102,112,133,1);
-    color: #fff;
-    opacity: 1;
-    position: absolute;
-    top: 713px;
-    left: 866px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  
-  #enviarBtn:hover {
-    background-color: rgba(10,146,155,1); 
-  }
-  
-  #adopcionBtn,
-  #matchesBtn,
-  #mascotasBtn {
-    padding: 10px 53px;
-    border-radius: 68px;
-    font-size: 16px;
-    background-color: #0DCEDA;
-    color: #FFFFFF;
-    border: none;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  #adopcionBtn:hover{
-    background-color: rgba(102,112,133,1); 
-  }
-  
-  #matchesBtn:hover{
-    background-color: rgba(102,112,133,1); 
-  }
-  
-  #mascotasBtn:hover{
-    background-color: rgba(102,112,133,1); 
-  }
-  
-  .contenedor {
-    text-align: center;
-    line-height: 2; 
-    
-  }
-  
-  
+}
+
+
+
+
