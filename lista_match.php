@@ -116,7 +116,7 @@
             ?> 
             <?php
         else : ?>
-        <img src="./img/imagen-noHayMascotasCruza.png" width="100%" style="padding-top: 10px">
+        <img src="./img/noMatches.png" width="100%" style="padding-top: 10px">
 
     <?php endif;?>
     <footer>
