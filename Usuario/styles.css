@@ -1,0 +1,44 @@
+.panel{
+    position: absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    transition: transform 300ms;
+    z-index:-1;
+}
+
+.panel div{  
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(222, 221, 221);
+    width: 400px;
+    height:200px;
+    z-index:1000;
+}
+
+.panel[data-on='on'] {
+    transform: scale(1);
+}
+
+.panel[data-on='off'] {
+    transform: scale(0);
+}
+
+.star {
+    font-size: 50px;
+    color: #f4ecec;
+    transition: color 0.3s;
+    cursor: pointer;
+       
+}
+    
+.star:hover,
+.star.checked {
+        color: #0DCEDA;
+}

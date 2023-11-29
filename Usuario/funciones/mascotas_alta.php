@@ -10,7 +10,7 @@ echo var_dump($_FILES);
     $file_name = $_FILES['archivo']['name'];
     $file_tmp = $_FILES['archivo']['tmp_name'];
     $ext = pathinfo($file_name, PATHINFO_EXTENSION);
-    $dir = "../img_mascotas/";
+    $dir = "../../img_mascotas/";
     $file_enc = md5_file($file_tmp);
 
 // Generate a unique filename

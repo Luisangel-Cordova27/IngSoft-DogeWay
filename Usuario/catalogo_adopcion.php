@@ -4,18 +4,19 @@
         header("Location: login.php");
         exit();
     }
-?>
 
+    $userid = $_SESSION['Admin'];
+?>
 <!doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1.2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <title>Mis Mascotas - Dogeway </title>
-    <script>
+    <title>Dogeway - Adopcion </title>
+<script>
     function redirectToPage(url){
                 window.location.href = url;
             }
@@ -26,11 +27,11 @@
         <div class="container-header">
             <h1> 
                 <a href="index.html">
-                    <img src="img/Logo.png" alt="logo" >
+                    <img src="img/Logo.png" alt="logo">
                 </a>
             </h1>
 
-            <nav class="landing-nav" >
+            <nav class="landing-nav">
                 <ul class="opciones-landing">
                     <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
                     <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
@@ -43,45 +44,48 @@
         </div>
     </header>
 
-    <section class="titulomypets">
-        <div class="headliner2">
+    <section class="titulocatalogo">
+        <div class="headliner">
             <div class="texto">
-            <h1 style='color:#0DCEDA;'>Mis  </h1>
+            <h1 style='color:#0DCEDA;'>Catálogo</h1>
             </div>
-            <div class="texto" style="padding-left: 8px;">
-            <u><h1>   Mascotas</h1></u>
+            <div class="texto">
+            <u style="text-decoration: underline;"><h1>Adopción</h1></u>
             </div>
-            <br>
-            <h2>Haz click en la tarjeta de la mascota para ver más detalles y editarlos :) </h2>
         </div>
-        <center><button class="button-Register" type="button" onclick="redirectToPage('./registromascotas.html')">AGREGAR MASCOTA</button></center>
-    </section>
-   
+        <br><br>  
+    </section><br>
     <section class="catalogo" id="adopcion">
+    <?php 
+    require('./funciones/conecta.php');
+        $con = conecta();
+        $sql = "SELECT id_mascota,foto,nombre,raza,pet.Edad,nickname FROM mascota as pet 
+                JOIN usuario ON dueno = id WHERE adopcion=1 AND dueno != $userid;";
+        $res = $con->query($sql);
+    if ($res && $res->num_rows > 0):
+            ///Muestra los elementos dentro de la tabla?>
+            <center><h2>Haz click en la carta de la mascota para ver más detalles c: </h2></center>
             <?php
-            require('./funciones/conecta.php');
-            $con = conecta();
-            $userid = $_SESSION["Admin"]; 
-            $sql = "SELECT * FROM mascota WHERE dueno = $userid";
-            $res = $con->query($sql);
-            $number = 0;
-            ///Muestra los elementos dentro de la tabla
             while($row = $res->fetch_array())       {
                 $id = $row["id_mascota"];
-                $url = "edicionperfilmascota.php?id=" .$id;
+                $url = "detalle_catalogo.php?id=" . $id;
                 $foto = $row["foto"];
                 $nombre = $row["nombre"];
+                $user = $row['nickname'];
                 $raza = $row["raza"];                    
-                $edad = $row["Edad"];?>
+                $edad = $row["Edad"];
+                ?>
+                
                         <div class="element" onclick="redirectToPage('<?php echo $url; ?>')">
                         <div class="contentbox">
-                            <div class="box_user1">
-                                <br>
-                        <form action='edicionperfilmascota.php' METHOD='POST'>  
-                           <a href="javascript:;" onclick="parentNode.submit();" id="edicion"><input type = "hidden" id="id" name="id" value="<?php echo $id ?>"/>
-                           <img src="./img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/></a>
-                        </form>
-                           <?php
+                            <div class="box_user">
+                            <?php
+                                echo '<img src="../img/user_icon.png" style="height:30px;"><p style="font-size:15px;">
+                                '.$user.'</p>
+                            </div>';
+                            ?>
+                           <img src="../img_mascotas/<?php echo $foto ?>" style="height: 175px; width: 250px; align-items:center;"/>
+                            <?php
                             echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$nombre.'</p>';
                             echo '<p class="razaAnimal" style="font-size:15px; float:left; color: gray;">'.$raza.'</p>';
                             echo '<p class="EdadAnimal" style="font-size:15px; float:right;color: gray; ">'.$edad.' año(s)</p>';
@@ -97,7 +101,12 @@
         </div>
 
     </div>
+    <?php
+    else : ?>
+        <br>
+        <img src="./img/noHayAdopcion.png" width="100%" style="padding-top: 10px">
 
+    <?php endif;?>
 
     </section>
 

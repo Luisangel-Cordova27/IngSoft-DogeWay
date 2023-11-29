@@ -70,7 +70,7 @@ while ($row = $res->fetch_array()) {
         <div class="columna">
             <div class="cuadro-fotoEPM">
                 <label for="imagen" class="boton-imagenEPM">
-                    <img src="./img_mascotas/<?php echo $foto?>" alt="Subir foto">
+                    <img src="../img_mascotas/<?php echo $foto?>" alt="Subir foto">
                 </label>
             </div>
           <input type="file" id="archivo" name="archivo">

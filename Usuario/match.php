@@ -85,7 +85,7 @@
                 
             </div>
             
-            <img src="./img_mascotas/<?php echo $foto ?>" class="img-match">
+            <img src="../img_mascotas/<?php echo $foto ?>" class="img-match">
         
         <div class="contenedor-likeDismiss"> 
             <div class="likeee" style="display:inline-block;">

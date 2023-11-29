@@ -19,7 +19,7 @@ if($res && $res->num_rows > 0){
     $_SESSION["Admin"] = $id;
     ?>
     <script language="javascript">
-        window.location.replace("../misMascotas.php");
+        window.location.replace("../Usuario/misMascotas.php");
     </script>
     <?php
 } else {

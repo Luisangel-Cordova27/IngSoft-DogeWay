@@ -1,7 +1,7 @@
 <?php
     session_start(); //reanudas la sesion activa :)
     if(isset($_SESSION['Admin'])){
-        header("Location: misMascotas.php");
+        header("Location: ./Usuario/misMascotas.php");
         exit();
     }
 ?>
