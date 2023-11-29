@@ -44,6 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <title>Chat</title>
     <style>
         .cuadro-chat {
@@ -112,7 +117,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             padding: 8px;
             border-radius: 10px;
         }
+        
         </style>
+
+  
 </head>
 <body>
 <header >
@@ -192,8 +200,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
     <div style = "margin-top: 30px; margin-left: 65px">
-        <a href="./funciones/cerrar_sesion.php" class="button-Register" >REPORTAR</a>
-        <a href="./funciones/cerrar_sesion.php" class="button-Register">VALORAR USUARIO</a>
+        <a href="quejas.html" class="button-Register">REPORTAR</a>
+        <a href="valoracion.html" class="button-Register">VALORAR USUARIO</a>
     </div>
     <footer>
         <div class="footer_element_mascotas">
@@ -207,5 +215,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </footer>
  
     <script src="./js/navigation.js"></script>
+    <script src="star.js"></script>
 </body>
 </html>
