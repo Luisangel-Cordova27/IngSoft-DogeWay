@@ -301,9 +301,12 @@ footer{
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
     box-shadow: 10px 10px lightblue;
+    transition: transform 0.3s ease;
 }
 
-
+.element:hover{
+    transform: scale(1.1);
+}
 /* Catalogo */
 
 section.catalogo{
@@ -1081,5 +1084,4 @@ section.titulocatalogo{
     transform: scale(1.1);
 
 }
-
 
