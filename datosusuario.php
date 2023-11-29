@@ -32,11 +32,17 @@ while ($row = $res->fetch_array()) {
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/validaciones.js"></script>
   <title>Informacion de perfil</title>
-
+    <script>
+        function cancelarCuenta(){
+            if(confirm("¿Estás seguro de querer CANCELAR TU CUENTA???")){
+                    window.location.replace("./funciones/cancelarCuenta.php");
+            }
+        }
+    </script>
 </head>
 <body>
-    <header >
-        <div class="container-header">
+<header >
+    <div class="container-header">
             <h1> 
                 <a href="index.html">
                     <img src="img/Logo.png" alt="logo">
@@ -44,6 +50,14 @@ while ($row = $res->fetch_array()) {
             </h1>
 
             <nav class="landing-nav">
+            <ul class="opciones-landing">
+            <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
+                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
+                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="datosusuario.php"><button class="button-Register" id="misMascotasButton">MI PERFIL</button></a></li>
+                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -109,10 +123,13 @@ while ($row = $res->fetch_array()) {
                         <label for="identificacion">Edad</label>
                         <input type="text" name="edad" id="edad" class="input-registro"value = "<?php echo $edad?>">
                     </div>
-                    <div class="button-register">
-                    <a href="editarusuario.php" class = "button-Register">Actualizar</a>
-                </div>  
-
+                    <div class="button-register" style="display:flex;">
+                    <a href="editarusuario.php" class = "button-Register" style="margin:10px;">EDITAR DATOS</a>
+                    <br>
+                    <a href="#" onclick="cancelarCuenta()" class = "button-Register" style="background-color: red; margin:10px;">CANCELAR CUENTA</a>
+                    </div> 
+                     
+                    
                 </div>
 
                 <div class="div-error" id="div-error">
@@ -123,7 +140,9 @@ while ($row = $res->fetch_array()) {
                 </div>
 
             </form>     
-        </div>      
+        </div>   
+        <div style="float:right; padding-right:60px; padding-top: 30px;">
+            </div>   
     </main>
 
     <footer>

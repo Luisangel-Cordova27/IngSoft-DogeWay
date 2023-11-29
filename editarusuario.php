@@ -36,7 +36,7 @@ while ($row = $res->fetch_array()) {
 </head>
 <body>
     <header >
-        <div class="container-header">
+    <div class="container-header">
             <h1> 
                 <a href="index.html">
                     <img src="img/Logo.png" alt="logo">
@@ -44,6 +44,14 @@ while ($row = $res->fetch_array()) {
             </h1>
 
             <nav class="landing-nav">
+            <ul class="opciones-landing">
+            <li><a href="catalogo_adopcion.php"><button class="button-Register" id="adopcionButton">ADOPCIÓN</button></a></li>
+                    <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
+                    <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
+                    <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="datosusuario.php"><button class="button-Register" id="misMascotasButton">MI PERFIL</button></a></li>
+                    <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
+                </ul>
             </nav>
         </div>
     </header>
