@@ -56,6 +56,7 @@
     $res = $con->query($sql);
 
     while ($row = $res->fetch_array()) {
+        $iddueno = $row['dueno'];
         $nombremascota = $row['nombre'];  
         $especiemascota = $row['raza'];
         $caracteristicasmascota = $row['caracteristicas'];
@@ -72,14 +73,18 @@
             <div class="contentboxlista">
                 <div class="box_user">
                     <div class="menu-desplegable">
+                        <form method = "POST" action="chat.php">
+                        <input type = "hidden" id = "receptor" name = "receptor" value = "<?php echo $iddueno;?>" readonly>
+                        <input type = "hidden" id = "emisor" name = "emisor" value = "<?php echo $userid;?>" readonly>
                         <div class="button-lista">
                             <?php echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$fullnameusuario.'</p>'; ?>
                             <p><?php echo 'Nombre Mascota: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
                             <img src="./img_mascotas/<?php echo $fotomascota?>" style="height: 100px; width: 175px; align-items:right;"/>
-                        <button type="submit"> CHAT</button>
+                        <button class= "button-Register" type="submit"> CHAT</button>
                         </div>
+    </form>
                         <div class="contenedor-info">
                             <p><?php echo 'Teléfono: '.$telefonousuario; ?></p>
                             <p><?php echo 'Especie: '.$especiemascota; ?></p>
