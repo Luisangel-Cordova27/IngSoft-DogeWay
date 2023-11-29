@@ -65,7 +65,8 @@
                         JOIN lista_match on id_mascota = mascota2
                         WHERE dueno = $userid AND like1=1 AND like2=1);";
     $res = $con->query($sql);
-
+    
+    if ($res && $res->num_rows > 0):
     while ($row = $res->fetch_array()) {
         $iddueno = $row['dueno'];
         $mascotaid = $row['id_mascota'];
@@ -111,9 +112,13 @@
             </div>
         </div>
             <?php
-            }        
+            }       
             ?> 
-            
+            <?php
+        else : ?>
+        <img src="./img/noMatches.png" width="100%" style="padding-top: 10px">
+
+    <?php endif;?>
     <footer>
         <div class="footer_element_mascotas">
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>

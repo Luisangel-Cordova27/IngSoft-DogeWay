@@ -7,7 +7,7 @@ $pass = $_POST["pasw"];
 
 
 //Variable Global
-$query = "SELECT * FROM usuario WHERE correo = '$admin' && contrasena = '$pass'";
+$query = "SELECT * FROM usuario WHERE correo = '$admin' AND contrasena = '$pass' AND CANCELADO=0";
 $res = $con->query($query);
 
 
