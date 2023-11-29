@@ -16,6 +16,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <title>Edicion de perfil de Mascota</title>
+  <style>
+        .contenedor-info {
+            display: none;
+        }
+        .contenedor-info.mostrar {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header >
@@ -76,16 +84,17 @@
                         <form method = "POST" action="chat.php">
                         <input type = "hidden" id = "receptor" name = "receptor" value = "<?php echo $iddueno;?>" readonly>
                         <input type = "hidden" id = "emisor" name = "emisor" value = "<?php echo $userid;?>" readonly>
-                        <div class="button-lista">
+                        <div class = "button-lista">
                             <?php echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$fullnameusuario.'</p>'; ?>
                             <p><?php echo 'Nombre Mascota: '.$nombremascota; ?> </p>
                             <p><?php echo 'Edad: '.$edadmascota; ?></p>
                             <p><?php echo 'Raza: '.$razamascota; ?></p>
                             <img src="./img_mascotas/<?php echo $fotomascota?>" style="height: 100px; width: 175px; align-items:right;"/>
-                        <button class= "button-Register" type="submit"> CHAT</button>
+                            <button class="button-irchat" type="submit">CHAT</button>
+                            <button class="button-detalles" type="button" onclick="toggleLista()">DETALLES</button>
                         </div>
     </form>
-                        <div class="contenedor-info">
+                        <div class="contenedor-info" id="menuDesplegable">
                             <p><?php echo 'Teléfono: '.$telefonousuario; ?></p>
                             <p><?php echo 'Especie: '.$especiemascota; ?></p>
                             <p><?php echo 'Caracteristicas: '.$caracteristicasmascota; ?></p>
@@ -98,17 +107,8 @@
         </div>
             <?php
             }        
-            ?>              
-
-    <script>
-        document.querySelectorAll('.button-lista').forEach(function(boton) {
-            boton.addEventListener('click', function() {
-                var contenedorInfo = this.parentElement.querySelector('.contenedor-info');
-                contenedorInfo.style.display = (contenedorInfo.style.display === 'block') ? 'none' : 'block';
-            });
-        });
-    </script>
-
+            ?> 
+            
     <footer>
         <div class="footer_element_mascotas">
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
@@ -119,6 +119,13 @@
                 </div>
         </div>
     </footer>
+
+    <script>
+        function toggleLista() {
+            var menuDesplegable = document.getElementById('menuDesplegable');
+            menuDesplegable.classList.toggle('mostrar');
+        }
+    </script>
 
     <script src="./js/navigation.js"></script>
 </body>
