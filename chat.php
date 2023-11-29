@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check if 'emisor' and 'receptor' keys are set in the $_POST array
     $id_emisor = isset($_POST['emisor']) ? $_POST['emisor'] : null;
     $id_receptor = isset($_POST['receptor']) ? $_POST['receptor'] : null;
+    $id_mascota = isset($_POST['mascotainteres']) ? $_POST['mascotainteres'] : null;
 
     // Obtener el mensaje desde el formulario HTML si está establecido
     $mensaje = isset($_POST['mensaje']) ? $_POST['mensaje'] : '';
@@ -51,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             border-radius: 10px;
             width: 90%;
             height: calc(100vh - 60px); /* Ajusta la altura al 100% de la ventana menos el encabezado */
-            margin-top: 60px;
+            margin-top: 20px;
             margin-left: 60px;
             margin-right: 60px;
             overflow: auto; /* Agrega desplazamiento si el contenido es más grande que la altura */
@@ -134,8 +135,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </nav>
         </div>
     </header>
+    <div>
+    <?php 
+    $sql = "SELECT id_mascota,foto,nombre,raza, color, nickname, fullname FROM mascota as pet 
+            JOIN usuario ON dueno = id AND dueno = $id_receptor;"; 
+    $res = $con->query($sql);
+    while ($row = $res->fetch_array()) {
+        $id = $row["id_mascota"];
+        $foto = $row["foto"];
+        $nombre = $row["nombre"];
+        $tipo = $row["raza"];
+        $raza = $row["color"];
+        $nickusuario = $row["nickname"];
+        $nombreuser = $row["fullname"];
+        }?>
+        <div style="display:inline-block; float: left; padding-left: 80px;">
+        <p><?php echo 'Mascota: '.$nombre; ?> </p>
+        </div>
+        <div style="display:inline-block; float: right; padding-right: 50px;">
+        <p><?php echo 'Usuario: '.$nickusuario; ?> </p>
+        </div>
+    </div>
 <div class = "cuadro-chat">
     <?php
+    
         // Mostrar todos los mensajes, independientemente de la solicitud
         // Obtener todos los mensajes de la base de datos
         $sql = "SELECT * FROM mensajes WHERE (id_emisor = ? AND id_receptor = ?) OR (id_emisor = ? AND id_receptor = ?) ORDER BY fecha_envio";

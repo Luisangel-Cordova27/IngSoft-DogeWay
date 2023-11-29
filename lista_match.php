@@ -54,19 +54,21 @@
     <?php
     require('./funciones/conecta.php');
     $con = conecta();
-    $sql = "SELECT mascota.*, usuario.id, usuario.fullname, 
-    usuario.telefono, lista_match.mascota1, lista_match.mascota2, 
-    lista_match.like1, lista_match.like2
-    FROM mascota
-    INNER JOIN usuario ON usuario.id = mascota.dueno
-    inner JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 
-    OR mascota.id_mascota = lista_match.mascota2)
-    WHERE lista_match.like1 = 1 AND lista_match.like2 = 1 
-    AND mascota.dueno != $userid";
+    $sql = "SELECT * FROM `mascota` 
+    JOIN usuario ON dueno = id
+    WHERE id_mascota IN (SELECT mascota2 FROM `mascota`
+                        JOIN usuario ON dueno = id
+                        JOIN lista_match on id_mascota = mascota1
+                        WHERE dueno = $userid AND like1=1 AND like2=1)
+    OR id_mascota IN 	(SELECT mascota1 FROM `mascota`
+                        JOIN usuario ON dueno = id
+                        JOIN lista_match on id_mascota = mascota2
+                        WHERE dueno = $userid AND like1=1 AND like2=1);";
     $res = $con->query($sql);
 
     while ($row = $res->fetch_array()) {
         $iddueno = $row['dueno'];
+        $mascotaid = $row['id_mascota'];
         $nombremascota = $row['nombre'];  
         $especiemascota = $row['raza'];
         $caracteristicasmascota = $row['caracteristicas'];
@@ -86,6 +88,7 @@
                         <form method = "POST" action="chat.php">
                         <input type = "hidden" id = "receptor" name = "receptor" value = "<?php echo $iddueno;?>" readonly>
                         <input type = "hidden" id = "emisor" name = "emisor" value = "<?php echo $userid;?>" readonly>
+                        <input type = "hidden" id = "mascotainteres" name = "mascotainteres" value = "<?php echo $mascotaid;?>" readonly>
                         <div class = "button-lista">
                             <?php echo '<p class="nombreAnimal" style="font-size:15px;" align="left">'.$fullnameusuario.'</p>'; ?>
                             <p><?php echo 'Nombre Mascota: '.$nombremascota; ?> </p>
