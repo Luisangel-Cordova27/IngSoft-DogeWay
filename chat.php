@@ -190,6 +190,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
     </div>
+
+    <div style = "margin-top: 30px; margin-left: 65px">
+        <a href="./funciones/cerrar_sesion.php" class="button-Register" >REPORTAR</a>
+        <a href="./funciones/cerrar_sesion.php" class="button-Register">VALORAR USUARIO</a>
+    </div>
     <footer>
         <div class="footer_element_mascotas">
             <h3>® 2023 DogeWay. All Rights reserved<h3><br>
