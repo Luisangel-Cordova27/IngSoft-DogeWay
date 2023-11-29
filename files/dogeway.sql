@@ -145,6 +145,32 @@ ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
+--
+-- Estructura de tabla para la tabla `formulario_quejas`
+--
+
+CREATE TABLE `formulario_quejas` (
+  `id` int(11) NOT NULL,
+  `fecha_incidente` date DEFAULT NULL,
+  `usuario_reportado` varchar(255) DEFAULT NULL,
+  `nombre_usuario` varchar(255) DEFAULT NULL,
+  `apellido_usuario` varchar(255) DEFAULT NULL,
+  `ubicacion_incidente` varchar(255) DEFAULT NULL,
+  `detalles_incidente` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `formulario_quejas`
+--
+
+INSERT INTO `formulario_quejas` (`id`, `fecha_incidente`, `usuario_reportado`, `nombre_usuario`, `apellido_usuario`, `ubicacion_incidente`, `detalles_incidente`) VALUES
+(9, '2023-11-27', 'gatitofeliz', 'Juan', 'Perez', 'Guadalajara, Jalisco', 'Regañó a mi perrito '),
+(10, '2023-11-26', 'gatitofeliz', 'Juan', 'Perez', 'Guadalajara, Jalisco', 'Regañó a mi perrito ');
+
+-- --------------------------------------------------------
+
+--
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
