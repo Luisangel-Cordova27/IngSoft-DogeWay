@@ -18,8 +18,9 @@
     FROM mascota 
     INNER JOIN usuario ON usuario.id = mascota.dueno 
     LEFT JOIN lista_match ON (mascota.id_mascota = lista_match.mascota1 OR mascota.id_mascota = lista_match.mascota2)
-    WHERE dueno != $ownpetid AND adopcion = 0 AND raza = '$ownpettipo' AND color = '$ownpetraza' 
-    AND (lista_match.like1 IS NULL AND lista_match.like2 IS NULL) ORDER BY RAND()";
+    WHERE mascota.id_mascota != $ownpetid AND mascota.dueno != $userid
+    AND adopcion = 0 AND raza = '$ownpettipo' AND color = '$ownpetraza' 
+    AND (lista_match.like1 IS NULL OR lista_match.like2 IS NULL) ORDER BY RAND()";
 
     $res = $con->query($sql);
 
@@ -48,18 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <title>DogeWay - Match</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-        function cargarSiguienteRegistro(){
-            $.ajax({
-                url: "actualiza_match.php",
-                type: "POST",
-                dataType: "text",
-                data: id1:<?php echo $userid?>
-                success:
-            })
-        }
 
-</script>
 </head>
 <body>
     <header >
@@ -76,6 +66,7 @@
                     <li><a href="seleccion_match.php"><button class="button-Register" id="matchButton">MATCH</button></a></li>
                     <li><a href="lista_match.php"><button class="button-Register" id="listaMatchesButton">LISTA DE MATCHES</button></a></li>
                     <li><a href="misMascotas.php"><button class="button-Register" id="misMascotasButton">MIS MASCOTAS</button></a></li>
+                    <li><a href="editarusuario.php"><button class="button-Register" id="misMascotasButton">MI PERFIL</button></a></li>
                     <li><a href="./funciones/cerrar_sesion.php">Cerrar sesión</a></li>
                 </ul>
             </nav>
@@ -88,8 +79,6 @@
 
     <div style="height: 700px; width: 90%; margin: 0 auto; display: flex; gap: 2%;">
         <div id="left-match" class="mascota-container">
-            <form id="next" name="next" method="POST" action="actualizaMatch.php" >
-        
             <div class="user">
                 <img src="img/user-icon.png" alt="" srcset="">
                 <p><?php echo $duenoname ?><p>
@@ -98,20 +87,24 @@
             
             <img src="./img_mascotas/<?php echo $foto ?>" class="img-match">
         
-            <div class="contenedor-likeDismiss"> 
-            <form id="match" name="match" method="POST" action="./funciones/actualizaMatch.php">
+        <div class="contenedor-likeDismiss"> 
+            <div class="likeee" style="display:inline-block;">
+            <form id="match1" name="match1" method="POST" action="./funciones/actualizaMatch.php">
                 <input type="hidden" name="mascota1" id="mascota1" value="<?php echo $ownpetid ;?>" readonly> 
                 <input type="hidden" name="mascota2" id="mascota2" value="<?php echo $id ?>" readonly>
                 <input type="hidden" name="like" id="like" value="1" readonly> 
-                <a onclick="parentNode.submit();" id="nexttButton" ><img src="img/Love.png" alt="" srcset="" ></a>
+                <a onclick="parentNode.submit();"><img src="img/Love.png" alt="" srcset=""></a>
             </form>
+            </div>
+            <div class="dislikee" style="display:inline-block;">
             <form id="match2" name="match2" method="POST" action="./funciones/actualizaMatch.php">
                 <input type="hidden" name="mascota1" id="mascota1" value="<?php echo $ownpetid ;?>" readonly> 
                 <input type="hidden" name="mascota2" id="mascota2" value="<?php echo $id ?>" readonly>
                 <input type="hidden" name="like" id="like" value="0" readonly> 
-                <a onclick="parentNode.submit();" id="nextButton"><img src="img/Dismiss.png" alt="" srcset=""></a>
-            </form>   
-           </div>
+                <a onclick="parentNode.submit();"> <img src="img/Dismiss.png" alt="" srcset=""></a>
+            </form>  
+            </div> 
+        </div>
         
         </div>
 
@@ -126,7 +119,6 @@
             </div>
         </div>
     </div>
-    </form>
     <?php
     else : ?>
         <br>
